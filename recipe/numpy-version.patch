@@ -1,0 +1,19 @@
+commit 027dbfad5f0064d287e95043179eec7f9981245d
+Author: Marten van Kerkwijk <mhvk@astro.utoronto.ca>
+Date:   Sat Dec 24 17:06:08 2016 -0500
+
+    Ensure NUMPY_LT_1_12 works for beta prerelease.
+
+diff --git a/astropy/utils/compat/numpycompat.py b/astropy/utils/compat/numpycompat.py
+index fbdd029..bda721f 100644
+--- a/astropy/utils/compat/numpycompat.py
++++ b/astropy/utils/compat/numpycompat.py
+@@ -21,7 +21,7 @@ NUMPY_LT_1_9_1 = not minversion('numpy', '1.9.1')
+ NUMPY_LT_1_10 = not minversion('numpy', '1.10.0')
+ NUMPY_LT_1_10_4 = not minversion('numpy', '1.10.4')
+ NUMPY_LT_1_11 = not minversion('numpy', '1.11.0')
+-NUMPY_LT_1_12 = not minversion('numpy', '1.12dev')
++NUMPY_LT_1_12 = not minversion('numpy', '1.12')
+ 
+ 
+ def _monkeypatch_unicode_mask_fill_values():
