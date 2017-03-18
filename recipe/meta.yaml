@@ -1,4 +1,4 @@
-{% set version = "1.3" %}
+{% set version = "1.3.1" %}
 
 package:
   name: astropy
@@ -7,9 +7,8 @@ package:
 source:
   fn: astropy-{{version}}.tar.gz
   url: https://pypi.io/packages/source/a/astropy/astropy-{{version}}.tar.gz
-  md5: bf4c8a033a7085fbc9ec604eebbdbdc5
-  patches:
-    - numpy-version.patch  # use commit 027dbfad5 from master
+  md5: f7cb71c4802f0b262d0cfffbc0098cce
+
 
 build:
   detect_binary_files_with_prefix: False
