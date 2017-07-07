@@ -29,6 +29,8 @@ requirements:
     - python
     - setuptools
     - numpy x.x
+    - jinja2
+    - cython
 
   run:
     - python
