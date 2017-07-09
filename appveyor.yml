@@ -105,6 +105,10 @@ environment:
 platform:
     - x64
 
+# Post-conda-smithy customization: build on this OS until we can figure out
+# how to workaround a compiler bug introduced in Update 3.
+os: Visual Studio 2015 Update 2
+
 install:
     # If there is a newer build queued for the same PR, cancel this one.
     - cmd: |
