@@ -9,3 +9,12 @@
      int tcode, maxelem2, hdutype, xcode, decimals;
      long twidth, incre;
      long ii, xwidth, ntodo;
+@@ -2533,7 +2533,7 @@
+   and will be scaled by the FITS TSCALn and TZEROn values if necessary.
+ */
+ {
+-    double scale, zero, power = 1., dtemp;
++    double scale, zero, power = 1., dtemp, unused_ICE_workaround = 0.;
+     int tcode, maxelem2, hdutype, xcode, decimals;
+     long twidth, incre;
+     long ii, xwidth, ntodo;
