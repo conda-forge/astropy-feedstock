@@ -8,6 +8,8 @@ source:
   fn: astropy-{{version}}.tar.gz
   url: https://pypi.io/packages/source/a/astropy/astropy-{{version}}.tar.gz
   md5: 5b8d4191ea210423826d4a254e984e5d
+  patches:
+    - vs-ice-workaround.patch  # [win]
 
 
 build:
