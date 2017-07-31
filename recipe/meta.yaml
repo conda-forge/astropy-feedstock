@@ -1,4 +1,4 @@
-{% set version = "2.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: astropy
@@ -7,7 +7,7 @@ package:
 source:
   fn: astropy-{{version}}.tar.gz
   url: https://pypi.io/packages/source/a/astropy/astropy-{{version}}.tar.gz
-  md5: 5b8d4191ea210423826d4a254e984e5d
+  md5: f7bc6ff800575705d8ad0214a89ba489
 
 
 build:
@@ -29,8 +29,6 @@ requirements:
     - python
     - setuptools
     - numpy x.x
-    - jinja2
-    - cython
 
   run:
     - python
