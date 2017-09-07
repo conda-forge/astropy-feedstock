@@ -8,6 +8,9 @@ source:
   fn: astropy-{{version}}.tar.gz
   url: https://pypi.io/packages/source/a/astropy/astropy-{{version}}.tar.gz
   md5: f7bc6ff800575705d8ad0214a89ba489
+  patches:
+    # invalid compressed data trips up some virus scanners.  This patch can be removed in astropy 2.0.2
+    - create_invalid_compressed_data_on_fly.patch
 
 
 build:
@@ -21,7 +24,7 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 1
+  number: 2
 
 requirements:
 

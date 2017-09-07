@@ -1,0 +1,161 @@
+From a21ac95a57ddbf44569c6f78b978a4a9054f8e21 Mon Sep 17 00:00:00 2001
+From: Dan D'Avella <drdavella@gmail.com>
+Date: Wed, 6 Sep 2017 17:05:16 -0400
+Subject: [PATCH 1/3] Create invalid compressed data files on the fly
+
+---
+ astropy/utils/tests/data/invalid.dat.bz2 |  1 -
+ astropy/utils/tests/data/invalid.dat.gz  |  1 -
+ astropy/utils/tests/test_data.py         | 41 ++++++++++++++++++++++++++++----
+ 3 files changed, 36 insertions(+), 7 deletions(-)
+ delete mode 100644 astropy/utils/tests/data/invalid.dat.bz2
+ delete mode 100644 astropy/utils/tests/data/invalid.dat.gz
+
+diff --git a/astropy/utils/tests/data/invalid.dat.bz2 b/astropy/utils/tests/data/invalid.dat.bz2
+deleted file mode 100644
+index 244d27c191..0000000000
+--- a/astropy/utils/tests/data/invalid.dat.bz2
++++ /dev/null
+@@ -1 +0,0 @@
+-BZhinvalid
+\ No newline at end of file
+diff --git a/astropy/utils/tests/data/invalid.dat.gz b/astropy/utils/tests/data/invalid.dat.gz
+deleted file mode 100644
+index c7a63aefb6..0000000000
+--- a/astropy/utils/tests/data/invalid.dat.gz
++++ /dev/null
+@@ -1 +0,0 @@
+-�invalid
+\ No newline at end of file
+diff --git a/astropy/utils/tests/test_data.py b/astropy/utils/tests/test_data.py
+index e6c75d5010..f34ea5d52c 100644
+--- a/astropy/utils/tests/test_data.py
++++ b/astropy/utils/tests/test_data.py
+@@ -12,6 +12,8 @@
+ import sys
+ import tempfile
+
++import pytest
++
+ from ..data import (_get_download_cache_locs, CacheMissingWarning,
+                     get_pkg_data_filename, get_readable_fileobj)
+
+@@ -152,17 +154,46 @@ def test_local_data_obj(filename):
+             assert f.read().rstrip() == b'CONTENT'
+
+
+-@pytest.mark.parametrize(('filename'), ['invalid.dat.gz', 'invalid.dat.bz2'])
+-def test_local_data_obj_invalid(filename):
++@pytest.fixture(params=['invalid.dat.bz2', 'invalid.dat.gz'])
++def bad_compressed(request, tmpdir):
++
++    # These contents have valid headers for their respective file formats, but
++    # are otherwise malformed and invalid.
++    bz_content = b'BZhinvalid'
++    gz_content = b'\x1f\x8b\x08invalid'
++
++    filename = os.path.join(tmpdir, request.param)
++    with open(filename, 'wb') as handle:
++        if filename.endswith('.bz2'):
++            contents = bz_content
++        elif filename.endswith('.gz'):
++            contents = gz_content
++        else:
++            contents = 'invalid'
++        handle.write(contents)
++    return filename
++
++
++def test_local_data_obj_invalid(bad_compressed):
+     from ..data import get_pkg_data_fileobj
+
+-    if (not HAS_BZ2 and 'bz2' in filename) or (not HAS_XZ and 'xz' in filename):
++    is_bz2 = bad_compressed.endswith('.bz2')
++    is_xz = bad_compressed.endswith('.xz')
++
++    # Note, since these invalid files are created on the fly in order to avoid
++    # problems with detection by antivirus software
++    # (see https://github.com/astropy/astropy/issues/6520), it is no longer
++    # possible to use ``get_pkg_data_fileobj`` to read the files. Technically,
++    # they're not local anymore: they just live in a temporary directory
++    # created by pytest. However, we can still use get_readable_fileobj for the
++    # test.
++    if (not HAS_BZ2 and is_bz2) or (not HAS_XZ and is_xz):
+         with pytest.raises(ValueError) as e:
+-            with get_pkg_data_fileobj(os.path.join('data', filename), encoding='binary') as f:
++            with get_readable_fileobj(bad_compressed, encoding='binary') as f:
+                 f.read()
+         assert ' format files are not supported' in str(e)
+     else:
+-        with get_pkg_data_fileobj(os.path.join('data', filename), encoding='binary') as f:
++        with get_readable_fileobj(bad_compressed, encoding='binary') as f:
+             assert f.read().rstrip().endswith(b'invalid')
+
+
+
+From 94b3bd269198b13bf981296750ee3c90a4a38321 Mon Sep 17 00:00:00 2001
+From: Dan D'Avella <drdavella@gmail.com>
+Date: Thu, 7 Sep 2017 09:01:25 -0400
+Subject: [PATCH 2/3] Fix data file creation in pytest fixture...
+
+Implicitly treating the pytest `tmpdir` fixture as a string does not
+work in all versions of Python.
+---
+ astropy/utils/tests/test_data.py | 21 ++++++++++++---------
+ 1 file changed, 12 insertions(+), 9 deletions(-)
+
+diff --git a/astropy/utils/tests/test_data.py b/astropy/utils/tests/test_data.py
+index f34ea5d52c..d1062b95fa 100644
+--- a/astropy/utils/tests/test_data.py
++++ b/astropy/utils/tests/test_data.py
+@@ -162,15 +162,18 @@ def bad_compressed(request, tmpdir):
+     bz_content = b'BZhinvalid'
+     gz_content = b'\x1f\x8b\x08invalid'
+
+-    filename = os.path.join(tmpdir, request.param)
+-    with open(filename, 'wb') as handle:
+-        if filename.endswith('.bz2'):
+-            contents = bz_content
+-        elif filename.endswith('.gz'):
+-            contents = gz_content
+-        else:
+-            contents = 'invalid'
+-        handle.write(contents)
++    datafile = tmpdir.join(request.param)
++    filename = datafile.strpath
++
++    if filename.endswith('.bz2'):
++        contents = bz_content
++    elif filename.endswith('.gz'):
++        contents = gz_content
++    else:
++        contents = 'invalid'
++
++    datafile.write(contents, mode='wb')
++
+     return filename
+
+
+
+From 690937c21b48e4093ee1a167a5d407f3bae9a3da Mon Sep 17 00:00:00 2001
+From: Dan D'Avella <drdavella@gmail.com>
+Date: Thu, 7 Sep 2017 09:03:37 -0400
+Subject: [PATCH 3/3] Update change log
+
+---
+ CHANGES.rst | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/CHANGES.rst b/CHANGES.rst
+index c67b057787..10255f4846 100644
+--- a/CHANGES.rst
++++ b/CHANGES.rst
+@@ -340,6 +340,9 @@ astropy.tests
+
+ - Fixed issue running doctests with pytest>=3.2. [#6423]
+
++- Fixed issue caused by antivirus software in response to malformed compressed
++  files used for testing. [#6522]
++
+ astropy.time
+ ^^^^^^^^^^^^
