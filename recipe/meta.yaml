@@ -61,6 +61,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - astrofrog
+    - astrofrog-conda-forge
     - mwcraig
     - bsipocz
