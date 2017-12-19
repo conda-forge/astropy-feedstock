@@ -28,11 +28,11 @@ requirements:
   build:
     - python
     - setuptools
-    - numpy x.x
+    - numpy
 
   run:
     - python
-    - numpy x.x
+    - numpy
     - pytest
 
 test:
