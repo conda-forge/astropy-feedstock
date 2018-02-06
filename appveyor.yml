@@ -25,27 +25,19 @@ environment:
       CONDA_PY: 35
       CONDA_INSTALL_LOCN: C:\\Miniconda35-x64
 
-# Post-conda-smithy customization: the older image that we use (see
-# below) doesn't include Miniconda 3.6. We can still build our 3.6
-# packages using Miniconda 3.5 just fine, though.
-
     - TARGET_ARCH: x86
       CONDA_PY: 36
-      CONDA_INSTALL_LOCN: C:\\Miniconda35
+      CONDA_INSTALL_LOCN: C:\\Miniconda36
 
     - TARGET_ARCH: x64
       CONDA_PY: 36
-      CONDA_INSTALL_LOCN: C:\\Miniconda35-x64
+      CONDA_INSTALL_LOCN: C:\\Miniconda36-x64
 
 
 # We always use a 64-bit machine, but can build x86 distributions
 # with the TARGET_ARCH variable.
 platform:
     - x64
-
-# Post-conda-smithy customization: build on this OS until we can figure out
-# how to workaround a compiler bug introduced in Update 3.
-os: Visual Studio 2015 Update 2
 
 install:
     # If there is a newer build queued for the same PR, cancel this one.
