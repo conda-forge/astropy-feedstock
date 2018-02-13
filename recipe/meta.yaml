@@ -28,14 +28,12 @@ requirements:
   build:
     - python
     - setuptools
-    - numpy 1.9.*  # [py27]
-    - numpy 1.9.*  # [py35]
+    - numpy 1.10.*  # [py35]
     - numpy 1.11.*  # [py36]
 
   run:
     - python
-    - numpy >=1.9  # [py27]
-    - numpy >=1.9  # [py35]
+    - numpy >=1.10  # [py35]
     - numpy >=1.11  # [py36]
     - pytest
 
