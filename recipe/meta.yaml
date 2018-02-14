@@ -1,4 +1,4 @@
-{% set version = "2.0.4" %}
+{% set version = "3.0" %}
 
 package:
   name: astropy
@@ -7,7 +7,7 @@ package:
 source:
   fn: astropy-{{version}}.tar.gz
   url: https://pypi.io/packages/source/a/astropy/astropy-{{version}}.tar.gz
-  md5: 5fddc8d2d11ec0496c7c8f808b656a7d
+  md5: 80aa168400269549d9331ff7c0931397
 
 
 build:
@@ -28,16 +28,14 @@ requirements:
   build:
     - python
     - setuptools
-    - numpy 1.9.*  # [py27]
-    - numpy 1.9.*  # [py35]
+    - numpy 1.10.*  # [py35]
     - numpy 1.11.*  # [py36]
 
   run:
     - python
-    - numpy >=1.9  # [py27]
-    - numpy >=1.9  # [py35]
+    - numpy >=1.10  # [py35]
     - numpy >=1.11  # [py36]
-    - pytest
+    - pytest-astropy
 
 test:
   commands:
