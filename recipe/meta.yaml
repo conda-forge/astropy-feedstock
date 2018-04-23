@@ -1,4 +1,4 @@
-{% set version = "2.0.5" %}
+{% set version = "2.0.6" %}
 
 package:
   name: astropy
@@ -7,7 +7,7 @@ package:
 source:
   fn: astropy-{{version}}.tar.gz
   url: https://pypi.io/packages/source/a/astropy/astropy-{{version}}.tar.gz
-  md5: 37b215f8ab47c188e8abd3f61c9a6987
+  sha256: 422219f38ad9ac0980f5faa62af3040df5c3d4396a7ff14547a8304761bfc6b1
 
 
 build:
