@@ -17,14 +17,16 @@ needed for performing astronomy and astrophysics research with Python.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/astropy-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/astropy-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/astropy-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/astropy-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/astropy-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/astropy-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/astropy-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/astropy-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/astropy-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/astropy-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/astropy-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/astropy-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/astropy/badges/version.svg)](https://anaconda.org/conda-forge/astropy)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/astropy/badges/downloads.svg)](https://anaconda.org/conda-forge/astropy)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-astropy-green.svg)](https://anaconda.org/conda-forge/astropy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/astropy.svg)](https://anaconda.org/conda-forge/astropy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/astropy.svg)](https://anaconda.org/conda-forge/astropy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/astropy.svg)](https://anaconda.org/conda-forge/astropy) |
 
 Installing astropy
 ==================
