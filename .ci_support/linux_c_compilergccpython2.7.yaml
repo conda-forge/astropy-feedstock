@@ -1,9 +1,11 @@
 build_number_decrement:
 - '0'
+c_compiler:
+- gcc
 channel_sources:
-- conda-forge,defaults
+- conda-forge/label/gcc7,defaults
 channel_targets:
-- conda-forge main
+- conda-forge gcc7
 docker_image:
 - conda/c3i-linux-64
 pin_run_as_build:
@@ -11,9 +13,10 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- '3.7'
+- '2.7'
 zip_keys:
-- - channel_sources
+- - c_compiler
+  - channel_sources
   - channel_targets
   - docker_image
   - build_number_decrement

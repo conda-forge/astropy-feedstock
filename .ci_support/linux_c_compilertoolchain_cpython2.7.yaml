@@ -1,19 +1,22 @@
 build_number_decrement:
-- '0'
+- '1000'
+c_compiler:
+- toolchain_c
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 docker_image:
-- conda/c3i-linux-64
+- condaforge/linux-anvil
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- '3.6'
+- '2.7'
 zip_keys:
-- - channel_sources
+- - c_compiler
+  - channel_sources
   - channel_targets
   - docker_image
   - build_number_decrement
