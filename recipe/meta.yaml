@@ -24,17 +24,17 @@ build:
   number: 1000
 
 requirements:
-
   build:
+    - {{ compiler('c') }}
+  host:
     - python
     - setuptools
     - numpy 1.10.*  # [py35]
-    - numpy 1.11.*  # [py36]
-
+    - numpy 1.11.*  # [py>=36]
   run:
     - python
     - numpy >=1.10  # [py35]
-    - numpy >=1.11  # [py36]
+    - numpy >=1.11  # [py>=36]
     - pytest-astropy
 
 test:
