@@ -21,7 +21,7 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 0
+  number: 1
 
 requirements:
 
@@ -37,7 +37,10 @@ requirements:
     - numpy >=1.9  # [py27]
     - numpy >=1.9  # [py35]
     - numpy >=1.11  # [py36]
-    - pytest
+
+    # Astropy 2.x is not compatible with pytest 3.8 and later
+    # https://github.com/astropy/astropy/issues/8177
+    - pytest <3.7
 
 test:
   commands:
