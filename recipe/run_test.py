@@ -1,9 +1,5 @@
 import astropy._compiler
-import astropy._erfa._core
-import astropy.convolution.boundary_extend
-import astropy.convolution.boundary_fill
-import astropy.convolution.boundary_none
-import astropy.convolution.boundary_wrap
+import astropy._erfa.core
 import astropy.cosmology.scalar_inv_efuncs
 import astropy.io.ascii.cparser
 import astropy.io.fits.compression
@@ -23,3 +19,4 @@ from astropy import test
 test(package='io.ascii')
 test(package='time')
 test(package='wcs')
+test(package='convolution')
