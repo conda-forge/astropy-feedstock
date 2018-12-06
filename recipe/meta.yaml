@@ -31,11 +31,13 @@ requirements:
     - python
     - setuptools
     - numpy 1.13.*  # [py35]
-    - numpy 1.13.*  # [py>=36]
+    - numpy >=1.13  # [py36]
+    - numpy 1.14.*  # [py>=37]
   run:
     - python
     - numpy >=1.13  # [py35]
-    - numpy >=1.13  # [py>=36]
+    - numpy >=1.13  # [py36]
+    - numpy >=1.14  # [py>=37]
     - pytest-astropy
 
 
