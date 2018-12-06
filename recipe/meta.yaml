@@ -30,12 +30,12 @@ requirements:
   host:
     - python
     - setuptools
-    - numpy 1.10.*  # [py35]
-    - numpy 1.11.*  # [py>=36]
+    - numpy 1.13.*  # [py35]
+    - numpy 1.13.*  # [py>=36]
   run:
     - python
-    - numpy >=1.10  # [py35]
-    - numpy >=1.11  # [py>=36]
+    - numpy >=1.13  # [py35]
+    - numpy >=1.13  # [py>=36]
     - pytest-astropy
 
     # Astropy 3.0.x has compatibility issues with pytest 4.0
