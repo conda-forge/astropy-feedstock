@@ -1,6 +1,8 @@
 About astropy
 =============
 
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+
 Home: http://www.astropy.org/
 
 Package license: BSD
@@ -107,3 +109,11 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@astrofrog-conda-forge](https://github.com/astrofrog-conda-forge/)
+* [@bsipocz](https://github.com/bsipocz/)
+* [@mwcraig](https://github.com/mwcraig/)
+
