@@ -9,7 +9,6 @@ source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{version}}.tar.gz
   sha256: b0182debddf44a3b7b5ae2919cd0c719c61bc7eb8bb0dd9131052ed9f1305b5c
 
-
 build:
   detect_binary_files_with_prefix: False
   entry_points:
