@@ -20,22 +20,24 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 0
+  number: 1000
 
 requirements:
-
   build:
+    - {{ compiler('c') }}
+  host:
     - python
     - setuptools
     - numpy 1.9.*  # [py27]
     - numpy 1.9.*  # [py35]
     - numpy 1.11.*  # [py36]
-
+    - numpy 1.14.*  # [py>=37]
   run:
     - python
     - numpy >=1.9  # [py27]
     - numpy >=1.9  # [py35]
     - numpy >=1.11  # [py36]
+    - numpy >=1.14  # [py>=37]
 
     # Astropy 2.x is not compatible with pytest 3.8 and later
     # https://github.com/astropy/astropy/issues/8177
