@@ -1,4 +1,4 @@
-{% set version = "2.0.11" %}
+{% set version = "2.0.12" %}
 
 package:
   name: astropy
@@ -7,7 +7,7 @@ package:
 source:
   fn: astropy-{{version}}.tar.gz
   url: https://pypi.io/packages/source/a/astropy/astropy-{{version}}.tar.gz
-  sha256: b0182debddf44a3b7b5ae2919cd0c719c61bc7eb8bb0dd9131052ed9f1305b5c
+  sha256: 81bae35320d7c72ae8569eeabc596e3a5ed416249b3fb2de9b40f30673085d0b
 
 build:
   detect_binary_files_with_prefix: False
@@ -20,7 +20,7 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 1000
+  number: 0
 
 requirements:
   build:
