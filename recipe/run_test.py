@@ -1,11 +1,11 @@
-import astropy._compiler
+# import astropy._compiler
 import astropy._erfa.core
 import astropy.cosmology.scalar_inv_efuncs
 import astropy.io.ascii.cparser
 import astropy.io.fits.compression
 import astropy.io.votable.tablewriter
 import astropy.modeling._projections
-import astropy.stats.lombscargle.implementations.cython_impl
+import astropy.timeseries.periodograms.lombscargle.implementations.cython_impl
 import astropy.table._column_mixins
 import astropy.table._np_utils
 import astropy.utils._compiler
