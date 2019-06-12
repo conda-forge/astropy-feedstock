@@ -1,4 +1,4 @@
-import astropy._compiler
+# import astropy._compiler
 import astropy._erfa.core
 import astropy.cosmology.scalar_inv_efuncs
 import astropy.io.ascii.cparser
