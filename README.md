@@ -3,7 +3,7 @@ About astropy
 
 Home: http://www.astropy.org/
 
-Package license: BSD
+Package license: BSD 3-clause
 
 Feedstock license: BSD 3-Clause
 
