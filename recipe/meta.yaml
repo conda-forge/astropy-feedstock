@@ -38,10 +38,11 @@ requirements:
     - numpy >=1.13  # [py35]
     - numpy >=1.13  # [py36]
     - numpy >=1.14  # [py>=37]
-    - pytest-astropy
 
 
 test:
+  requirements:
+    - pytest-astropy
   commands:
     - fits2bitmap --help
     - fitscheck --help
