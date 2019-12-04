@@ -41,7 +41,7 @@ requirements:
 
 
 test:
-  requirements:
+  requires:
     - pytest-astropy
   commands:
     - fits2bitmap --help
