@@ -29,6 +29,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
+    - pip
     - setuptools
     - numpy 1.13.*  # [py35]
     - numpy 1.13.*  # [py36]
