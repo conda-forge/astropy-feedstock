@@ -31,12 +31,11 @@ requirements:
     - python
     - pip
     - setuptools
-    - numpy 1.16.*  # [py36]
-    - numpy 1.16.*  # [py>=37]
+    - numpy 1.16.*  # [python_impl == "cpython"]
+    - numpy         # [python_impl == "pypy"]
   run:
     - python
-    - numpy >=1.16  # [py36]
-    - numpy >=1.16  # [py>=37]
+    - {{ pin_compatible("numpy") }}
 
 
 test:
