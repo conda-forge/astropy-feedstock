@@ -1,17 +1,16 @@
-{% set version = "4.0" %}
+{% set version = "4.0.1.post1" %}
 
 package:
   name: astropy
-  version: {{version}}
+  version: {{ version }}
 
 source:
-  fn: astropy-{{version}}.tar.gz
-  url: https://pypi.io/packages/source/a/astropy/astropy-{{version}}.tar.gz
-  sha256: 404200e0baa84de09ac563ad9ccab3817e9b9669d0025cee74a8752f4bc2771b
+  url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
+  sha256: 5c304a6c1845ca426e7bc319412b0363fccb4928cb4ba59298acd1918eec44b5
 
 
 build:
-  detect_binary_files_with_prefix: False
+  detect_binary_files_with_prefix: false
   entry_points:
     - fits2bitmap = astropy.visualization.scripts.fits2bitmap:main
     - fitscheck = astropy.io.fits.scripts.fitscheck:main
@@ -21,7 +20,7 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 2
+  number: 1
   skip: true  # [py27]
 
 requirements:
@@ -55,7 +54,7 @@ test:
 
 about:
   home: http://www.astropy.org/
-  license: BSD 3-clause
+  license: BSD-3-Clause
   license_file: LICENSE.rst
   summary: Community-developed Python Library for Astronomy
   description: |
