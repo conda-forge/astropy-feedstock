@@ -22,6 +22,7 @@ build:
     - wcslint = astropy.wcs.wcslint:main
   number: 0
   skip: true  # [py27]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -32,6 +33,8 @@ requirements:
     - setuptools
     - jinja2 2.10.3
     - cython 0.29.14
+    - setuptools_scm
+    - extension-helpers
     - numpy 1.16.*  # [py==36]
     - numpy 1.16.*  # [py==37]
     - numpy 1.17.*  # [py>=38]
