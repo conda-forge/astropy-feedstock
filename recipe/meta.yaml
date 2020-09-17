@@ -30,8 +30,7 @@ requirements:
     - python
     - pip
     - setuptools
-    - numpy 1.16.*  # [python_impl == "cpython"]
-    - numpy         # [python_impl == "pypy"]
+    - numpy
   run:
     - python
     - {{ pin_compatible("numpy") }}
