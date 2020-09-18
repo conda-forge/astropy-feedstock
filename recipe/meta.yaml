@@ -1,4 +1,4 @@
-{% set version = "4.1rc1" %}
+{% set version = "4.1rc2" %}
 
 package:
   name: astropy
