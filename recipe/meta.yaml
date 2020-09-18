@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: 214be44e18b713278752811bb1683d8792749e9dfc6295e33a29b4cabb0be800
+  sha256: 162b2e222d05523c67fab95fc34fbef881c9271ee01b171efa1b895eaaa28adb
 
 
 build:
