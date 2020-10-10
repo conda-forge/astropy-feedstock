@@ -30,6 +30,8 @@ requirements:
     - python
     - pip
     - setuptools
+    - jinja2 2.10.3
+    - cython 0.29.14
     - numpy 1.16.*  # [py36]
     - numpy 1.16.*  # [py>=37]
   run:
