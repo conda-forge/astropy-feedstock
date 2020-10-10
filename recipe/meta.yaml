@@ -32,12 +32,14 @@ requirements:
     - setuptools
     - jinja2 2.10.3
     - cython 0.29.14
-    - numpy 1.16.*  # [py36]
-    - numpy 1.16.*  # [py>=37]
+    - numpy 1.16.*  # [py==36]
+    - numpy 1.16.*  # [py==37]
+    - numpy 1.17.*  # [py>=38]
   run:
     - python
-    - numpy >=1.16  # [py36]
-    - numpy >=1.16  # [py>=37]
+    - numpy >=1.16  # [py==36]
+    - numpy >=1.16  # [py==37]
+    - numpy >=1.17  # [py>=38]
 
 
 test:
