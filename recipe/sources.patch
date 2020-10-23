@@ -1,0 +1,66 @@
+--- astropy.egg-info/SOURCES.txt	2020-10-21 14:03:34.000000000 -0500
++++ astropy.egg-info/SOURCES.txt	2020-10-23 10:27:06.000000000 -0500
+@@ -32,31 +32,31 @@
+ .github/ISSUE_TEMPLATE/feature_request.md
+ .pyinstaller/run_astropy_tests.py
+ .pyinstaller/hooks/hook-skyfield.py
+-/home/vsts/work/1/s/astropy/convolution/src/convolve.c
+-/home/vsts/work/1/s/astropy/io/ascii/cparser.pyx
+-/home/vsts/work/1/s/astropy/io/ascii/src/tokenizer.c
+-/home/vsts/work/1/s/astropy/modeling/src/projections.c
+-/home/vsts/work/1/s/astropy/table/_column_mixins.pyx
+-/home/vsts/work/1/s/astropy/table/_np_utils.pyx
+-/home/vsts/work/1/s/astropy/timeseries/periodograms/bls/_impl.pyx
+-/home/vsts/work/1/s/astropy/timeseries/periodograms/bls/bls.c
+-/home/vsts/work/1/s/astropy/utils/src/compiler.c
+-/home/vsts/work/1/s/astropy/wcs/src/astropy_wcs.c
+-/home/vsts/work/1/s/astropy/wcs/src/astropy_wcs_api.c
+-/home/vsts/work/1/s/astropy/wcs/src/distortion.c
+-/home/vsts/work/1/s/astropy/wcs/src/distortion_wrap.c
+-/home/vsts/work/1/s/astropy/wcs/src/docstrings.c
+-/home/vsts/work/1/s/astropy/wcs/src/pipeline.c
+-/home/vsts/work/1/s/astropy/wcs/src/pyutil.c
+-/home/vsts/work/1/s/astropy/wcs/src/sip.c
+-/home/vsts/work/1/s/astropy/wcs/src/sip_wrap.c
+-/home/vsts/work/1/s/astropy/wcs/src/str_list_proxy.c
+-/home/vsts/work/1/s/astropy/wcs/src/unit_list_proxy.c
+-/home/vsts/work/1/s/astropy/wcs/src/util.c
+-/home/vsts/work/1/s/astropy/wcs/src/wcslib_auxprm_wrap.c
+-/home/vsts/work/1/s/astropy/wcs/src/wcslib_tabprm_wrap.c
+-/home/vsts/work/1/s/astropy/wcs/src/wcslib_wrap.c
+-/home/vsts/work/1/s/astropy/wcs/src/wcslib_wtbarr_wrap.c
++./astropy/convolution/src/convolve.c
++./astropy/io/ascii/cparser.pyx
++./astropy/io/ascii/src/tokenizer.c
++./astropy/modeling/src/projections.c
++./astropy/table/_column_mixins.pyx
++./astropy/table/_np_utils.pyx
++./astropy/timeseries/periodograms/bls/_impl.pyx
++./astropy/timeseries/periodograms/bls/bls.c
++./astropy/utils/src/compiler.c
++./astropy/wcs/src/astropy_wcs.c
++./astropy/wcs/src/astropy_wcs_api.c
++./astropy/wcs/src/distortion.c
++./astropy/wcs/src/distortion_wrap.c
++./astropy/wcs/src/docstrings.c
++./astropy/wcs/src/pipeline.c
++./astropy/wcs/src/pyutil.c
++./astropy/wcs/src/sip.c
++./astropy/wcs/src/sip_wrap.c
++./astropy/wcs/src/str_list_proxy.c
++./astropy/wcs/src/unit_list_proxy.c
++./astropy/wcs/src/util.c
++./astropy/wcs/src/wcslib_auxprm_wrap.c
++./astropy/wcs/src/wcslib_tabprm_wrap.c
++./astropy/wcs/src/wcslib_wrap.c
++./astropy/wcs/src/wcslib_wtbarr_wrap.c
+ astropy/CITATION
+ astropy/__init__.py
+ astropy/_compiler.c
+@@ -1973,4 +1973,4 @@
+ licenses/PYFITS.rst
+ licenses/PYTHON.rst
+ licenses/README.rst
+-licenses/WCSLIB_LICENSE.rst
+\ No newline at end of file
++licenses/WCSLIB_LICENSE.rst
