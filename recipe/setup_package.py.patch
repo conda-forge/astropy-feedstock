@@ -1,3 +1,16 @@
+diff --git a/astropy/convolution/setup_package.py b/astropy/convolution/setup_package.py
+index a3446e83b..c343e6bb8 100644
+--- a/astropy/convolution/setup_package.py
++++ b/astropy/convolution/setup_package.py
+@@ -6,7 +6,7 @@ from setuptools import Extension
+ 
+ import numpy
+ 
+-C_CONVOLVE_PKGDIR = os.path.abspath(os.path.dirname(__file__))
++C_CONVOLVE_PKGDIR = os.path.relpath(os.path.dirname(__file__))
+ 
+ SRC_FILES = [os.path.join(C_CONVOLVE_PKGDIR, filename)
+              for filename in ['src/convolve.c']]
 diff --git a/astropy/utils/setup_package.py b/astropy/utils/setup_package.py
 index 77125ea0b..4067959a5 100644
 --- a/astropy/utils/setup_package.py
