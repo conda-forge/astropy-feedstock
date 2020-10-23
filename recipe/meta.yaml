@@ -7,7 +7,8 @@ package:
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
   sha256: a3bad6e1c2619135ad33e4d80452866eb9468f610bf00754da4001c63c1f7049
-
+  patches:
+    - setup_package.py.patch  # [win]
 
 build:
   detect_binary_files_with_prefix: false
