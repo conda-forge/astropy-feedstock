@@ -1,7 +1,7 @@
 About astropy
 =============
 
-Home: http://www.astropy.org/
+Home: https://www.astropy.org/
 
 Package license: BSD-3-Clause
 
@@ -11,7 +11,7 @@ Summary: Community-developed Python Library for Astronomy
 
 Development: https://github.com/astropy/astropy
 
-Documentation: http://docs.astropy.org/en/stable/
+Documentation: https://docs.astropy.org/en/stable/
 
 The Astropy Project is a community effort to develop a single package for
 Astronomy in Python. It contains core functionality and common tools

@@ -21,8 +21,7 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 0
-  skip: true  # [py27]
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -33,18 +32,20 @@ requirements:
     - pip
     - setuptools
     - jinja2 2.10.3
-    - cython 0.29.14
+    - cython 0.29.14  # [py<39]
+    - cython 0.29.21  # [py>=39]
     - setuptools_scm
     - extension-helpers
     - numpy 1.16.*  # [py==36]
     - numpy 1.16.*  # [py==37]
-    - numpy 1.17.*  # [py>=38]
+    - numpy 1.17.*  # [py==38]
+    - numpy 1.19.*  # [py>=39]
   run:
     - python
     - numpy >=1.16  # [py==36]
     - numpy >=1.16  # [py==37]
-    - numpy >=1.17  # [py>=38]
-
+    - numpy >=1.17  # [py==38]
+    - numpy >=1.19  # [py>=39]
 
 test:
   requires:
@@ -62,7 +63,7 @@ test:
     - astropy
 
 about:
-  home: http://www.astropy.org/
+  home: https://www.astropy.org/
   license: BSD-3-Clause
   license_file: LICENSE.rst
   summary: Community-developed Python Library for Astronomy
@@ -70,7 +71,7 @@ about:
     The Astropy Project is a community effort to develop a single package for
     Astronomy in Python. It contains core functionality and common tools
     needed for performing astronomy and astrophysics research with Python.
-  doc_url: http://docs.astropy.org/en/stable/
+  doc_url: https://docs.astropy.org/en/stable/
   dev_url: https://github.com/astropy/astropy
 
 extra:
