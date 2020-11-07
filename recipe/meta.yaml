@@ -21,7 +21,7 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -50,6 +50,10 @@ requirements:
 test:
   requires:
     - pytest-astropy
+    # setuptools dependency can be removed after
+    # https://github.com/conda-forge/pytest-doctestplus-feedstock/pull/13
+    # has been merged
+    - setuptools >=30.3.0
   commands:
     - fits2bitmap --help
     - fitscheck --help
