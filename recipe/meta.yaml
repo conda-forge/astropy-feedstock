@@ -35,9 +35,8 @@ requirements:
     - python
     - pip
     - setuptools
-    - jinja2 2.10.3
-    - cython 0.29.14  # [py<39]
-    - cython 0.29.21  # [py>=39]
+    - jinja2
+    - cython
     - setuptools_scm
     - extension-helpers
     - numpy
