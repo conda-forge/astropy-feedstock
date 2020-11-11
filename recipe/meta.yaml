@@ -43,6 +43,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible("numpy") }}
+    - numpy >=1.16
 
 test:
   requires:
