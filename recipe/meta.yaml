@@ -26,26 +26,24 @@ build:
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - python
     - pip
     - setuptools
-    - jinja2 2.10.3
-    - cython 0.29.14  # [py<39]
-    - cython 0.29.21  # [py>=39]
+    - jinja2
+    - cython
     - setuptools_scm
     - extension-helpers
-    - numpy 1.16.*  # [py==36]
-    - numpy 1.16.*  # [py==37]
-    - numpy 1.17.*  # [py==38]
-    - numpy 1.19.*  # [py>=39]
+    - numpy
   run:
     - python
-    - numpy >=1.16  # [py==36]
-    - numpy >=1.16  # [py==37]
-    - numpy >=1.17  # [py==38]
-    - numpy >=1.19  # [py>=39]
+    - {{ pin_compatible("numpy") }}
+    - numpy >=1.16
 
 test:
   requires:
