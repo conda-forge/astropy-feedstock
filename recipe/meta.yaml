@@ -1,4 +1,4 @@
-{% set version = "4.1" %}
+{% set version = "4.0.4" %}
 
 package:
   name: astropy
@@ -6,9 +6,8 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: a3bad6e1c2619135ad33e4d80452866eb9468f610bf00754da4001c63c1f7049
-  patches:
-    - sources.patch  # [win]
+  sha256: 46e9599c4029eab239323fde9ae54aba192737e27343b1eb543d7d910a92c259
+
 
 build:
   detect_binary_files_with_prefix: false
@@ -21,15 +20,10 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 2
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - python
@@ -37,9 +31,6 @@ requirements:
     - setuptools
     - jinja2
     - cython
-    - setuptools_scm
-    - extension-helpers
-    - numpy
   run:
     - python
     - {{ pin_compatible("numpy") }}
@@ -48,10 +39,6 @@ requirements:
 test:
   requires:
     - pytest-astropy
-    # setuptools dependency can be removed after
-    # https://github.com/conda-forge/pytest-doctestplus-feedstock/pull/13
-    # has been merged
-    - setuptools >=30.3.0
   commands:
     - fits2bitmap --help
     - fitscheck --help
@@ -65,7 +52,7 @@ test:
     - astropy
 
 about:
-  home: https://www.astropy.org/
+  home: http://www.astropy.org/
   license: BSD-3-Clause
   license_file: LICENSE.rst
   summary: Community-developed Python Library for Astronomy
@@ -73,7 +60,7 @@ about:
     The Astropy Project is a community effort to develop a single package for
     Astronomy in Python. It contains core functionality and common tools
     needed for performing astronomy and astrophysics research with Python.
-  doc_url: https://docs.astropy.org/en/stable/
+  doc_url: http://docs.astropy.org/en/stable/
   dev_url: https://github.com/astropy/astropy
 
 extra:
