@@ -31,6 +31,7 @@ requirements:
     - setuptools
     - jinja2
     - cython
+    - numpy
   run:
     - python
     - {{ pin_compatible("numpy") }}
