@@ -7,8 +7,6 @@ package:
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
   sha256: 2c194f8a429b8399de64a413a06881ea49f0525cabaa2d78fc132b9e970adc6a
-  patches:
-    - sources.patch  # [win]
 
 build:
   detect_binary_files_with_prefix: false
@@ -38,6 +36,8 @@ requirements:
     - setuptools
     - jinja2
     - cython
+    - setuptools_scm
+    - extension-helpers
     - numpy >=1.16
   run:
     - python
