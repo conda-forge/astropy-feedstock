@@ -1,17 +1,15 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
 c_compiler:
-- gcc
+- clang
 c_compiler_version:
-- '7'
-cdt_name:
-- cos6
+- '11'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
-docker_image:
-- quay.io/condaforge/linux-anvil-comp7
-numpy:
-- '1.16'
+macos_machine:
+- x86_64-apple-darwin13.4.0
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -19,7 +17,4 @@ pin_run_as_build:
 python:
 - 3.6.* *_cpython
 target_platform:
-- linux-64
-zip_keys:
-- - python
-  - numpy
+- osx-64
