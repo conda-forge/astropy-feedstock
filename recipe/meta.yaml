@@ -1,4 +1,4 @@
-{% set version = "4.0.4" %}
+{% set version = "4.2" %}
 
 package:
   name: astropy
@@ -6,8 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: 46e9599c4029eab239323fde9ae54aba192737e27343b1eb543d7d910a92c259
-
+  sha256: 2c194f8a429b8399de64a413a06881ea49f0525cabaa2d78fc132b9e970adc6a
 
 build:
   detect_binary_files_with_prefix: false
@@ -21,6 +20,8 @@ build:
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
   number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py<37]
 
 requirements:
   build:
@@ -35,11 +36,14 @@ requirements:
     - setuptools
     - jinja2
     - cython
+    - setuptools_scm
+    - extension-helpers
     - numpy >=1.16
   run:
     - python
     - {{ pin_compatible("numpy") }}
     - numpy >=1.16
+    - pyerfa
 
 test:
   requires:
