@@ -19,7 +19,7 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<37]
 
@@ -28,7 +28,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
-    - numpy >=1.16                           # [build_platform != target_platform]
+    - numpy >=1.17                           # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - python
@@ -38,11 +38,11 @@ requirements:
     - cython
     - setuptools_scm
     - extension-helpers
-    - numpy >=1.16
+    - numpy >=1.17
   run:
     - python
     - {{ pin_compatible("numpy") }}
-    - numpy >=1.16
+    - numpy >=1.17
     - pyerfa
 
 test:
