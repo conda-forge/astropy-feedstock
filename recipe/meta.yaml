@@ -38,7 +38,8 @@ requirements:
     - cython
     - setuptools_scm
     - extension-helpers
-    - numpy
+    - numpy 1.17.*  # [py<3.9]
+    - numpy         # [py>=3.9]
   run:
     - python
     - {{ pin_compatible("numpy") }}
