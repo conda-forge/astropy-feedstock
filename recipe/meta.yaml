@@ -38,7 +38,7 @@ requirements:
     - cython
     - setuptools_scm
     - extension-helpers
-    - numpy 1.17.*  # [py<3.9]
+    - numpy 1.17.*  # [py<39]
     - numpy         # [py>=3.9]
   run:
     - python
