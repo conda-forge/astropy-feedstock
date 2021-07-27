@@ -45,6 +45,8 @@ requirements:
     - {{ pin_compatible("numpy") }}
     - numpy >=1.17
     - pyerfa
+    - pyyaml >=3.13
+    - importlib-metadata
 
 test:
   requires:
