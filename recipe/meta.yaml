@@ -1,4 +1,4 @@
-{% set version = "4.3" %}
+{% set version = "4.3.post1" %}
 
 package:
   name: astropy
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: 6c1d1f0896e5d33851442865aa0ec4a2643dfaecb8853e9f4dca6d0541798744
+  sha256: 1b9f976f32675ae715bd38fcfb3540fcf01f6be1d75266c39b6fb085adac9410
 
 build:
   detect_binary_files_with_prefix: false
