@@ -38,13 +38,13 @@ requirements:
     - cython
     - setuptools_scm
     - extension-helpers
-    - numpy 1.17.*  # [py<39 and build_platform == target_platform and python_impl == 'cpython']
+    - numpy 1.18.*  # [py<39 and build_platform == target_platform and python_impl == 'cpython']
     - numpy         # [py>=39 or build_platform != target_platform or  python_impl == 'pypy']
   run:
     - python
     - {{ pin_compatible("numpy") }}
-    - numpy >=1.17
-    - pyerfa
+    - numpy >=1.18
+    - pyerfa >=2.0
     - pyyaml >=3.13
     - importlib-metadata
 
