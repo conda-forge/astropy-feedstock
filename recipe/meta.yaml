@@ -1,16 +1,16 @@
-{% set version = "2.0.16" %}
+{% set version = "4.0.6" %}
 
 package:
   name: astropy
-  version: {{version}}
+  version: {{ version }}
 
 source:
-  fn: astropy-{{version}}.tar.gz
-  url: https://pypi.io/packages/source/a/astropy/astropy-{{version}}.tar.gz
-  sha256: 9c067764f4119dd7bce3228b0b508d48ddad5d726c580b70215ee78baa2eb512
+  url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
+  sha256: 3a0bb1cdb2f434ebc844a008bf7b775ed2e4826e1e415cae842936b581efa0b7
+
 
 build:
-  detect_binary_files_with_prefix: False
+  detect_binary_files_with_prefix: false
   entry_points:
     - fits2bitmap = astropy.visualization.scripts.fits2bitmap:main
     - fitscheck = astropy.io.fits.scripts.fitscheck:main
@@ -24,26 +24,26 @@ build:
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython >=0.29.13                               # [build_platform != target_platform]
+    - numpy >=1.16                           # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - python
+    - pip
     - setuptools
-    - numpy 1.9.*  # [py27]
-    - numpy 1.9.*  # [py35]
-    - numpy 1.11.*  # [py36]
-    - numpy 1.14.*  # [py>=37]
+    - jinja2
+    - cython
+    - numpy >=1.16
   run:
     - python
-    - numpy >=1.9  # [py27]
-    - numpy >=1.9  # [py35]
-    - numpy >=1.11  # [py36]
-    - numpy >=1.14  # [py>=37]
-
-    # Astropy 2.x is not compatible with pytest 3.8 and later
-    # https://github.com/astropy/astropy/issues/8177
-    - pytest <3.7
+    - {{ pin_compatible("numpy") }}
+    - numpy >=1.16
 
 test:
+  requires:
+    - pytest-astropy
   commands:
     - fits2bitmap --help
     - fitscheck --help
@@ -58,7 +58,7 @@ test:
 
 about:
   home: http://www.astropy.org/
-  license: BSD 3-clause
+  license: BSD-3-Clause
   license_file: LICENSE.rst
   summary: Community-developed Python Library for Astronomy
   description: |
