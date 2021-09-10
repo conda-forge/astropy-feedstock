@@ -1,15 +1,11 @@
-import astropy._compiler
-import astropy._erfa._core
-import astropy.convolution.boundary_extend
-import astropy.convolution.boundary_fill
-import astropy.convolution.boundary_none
-import astropy.convolution.boundary_wrap
+# import astropy._compiler
+import astropy._erfa.core
 import astropy.cosmology.scalar_inv_efuncs
 import astropy.io.ascii.cparser
 import astropy.io.fits.compression
 import astropy.io.votable.tablewriter
 import astropy.modeling._projections
-import astropy.stats.lombscargle.implementations.cython_impl
+import astropy.timeseries.periodograms.lombscargle.implementations.cython_impl
 import astropy.table._column_mixins
 import astropy.table._np_utils
 import astropy.utils._compiler
@@ -20,6 +16,13 @@ import astropy.wcs._wcs
 # issues because they rely on C extensions and bundled libraries
 
 from astropy import test
-test(package='io.ascii')
+
+# Do not include the io.ascii tests unless/until this issue is fixed:
+# https://github.com/astropy/astropy/issues/9864
+#
+# They take more than two hours to run on some platforms!
+# test(package='io.ascii')
+
 test(package='time')
 test(package='wcs')
+test(package='convolution')
