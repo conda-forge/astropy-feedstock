@@ -7,6 +7,8 @@ package:
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
   sha256: 2d3951223b4eb7f368fcad8c8340d27374c5d8e3b635a636275acdb38f35cd51
+  patches:
+    - iterparse.c.patch
 
 build:
   detect_binary_files_with_prefix: false
