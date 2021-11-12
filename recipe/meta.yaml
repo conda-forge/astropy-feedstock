@@ -21,7 +21,7 @@ build:
     - wcslint = astropy.wcs.wcslint:main
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<37]
+  skip: true  # [py<38]
 
 requirements:
   build:
@@ -34,16 +34,18 @@ requirements:
     - python
     - pip
     - setuptools
-    - jinja2
-    - cython
-    - setuptools_scm
+    - jinja2 =2.10.3
+    - cython =0.29.22
+    - setuptools_scm >=6.2
     - extension-helpers
     - numpy
   run:
     - python
     - {{ pin_compatible("numpy") }}
-    - pyerfa >=1.7.3
+    - pyerfa >=2.0
     - importlib-metadata
+    - pyyaml >=3.13
+    - packaging >=19.0
 
 test:
   requires:
