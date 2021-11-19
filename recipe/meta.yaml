@@ -1,4 +1,4 @@
-{% set version = "4.3.1" %}
+{% set version = "5.0" %}
 
 package:
   name: astropy
@@ -6,9 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: 2d3951223b4eb7f368fcad8c8340d27374c5d8e3b635a636275acdb38f35cd51
-  patches:
-    - iterparse.c.patch
+  sha256: 70203e151e13292586a817b4069ce1aad4643567aff38b1d191c173bc54f3927
 
 build:
   detect_binary_files_with_prefix: false
@@ -21,9 +19,9 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<37]
+  skip: true  # [py<38]
 
 requirements:
   build:
@@ -36,16 +34,18 @@ requirements:
     - python
     - pip
     - setuptools
-    - jinja2
+    - jinja2 =2.10.3
     - cython
-    - setuptools_scm
+    - setuptools_scm >=6.2
     - extension-helpers
     - numpy
   run:
     - python
     - {{ pin_compatible("numpy") }}
-    - pyerfa >=1.7.3
+    - pyerfa >=2.0
     - importlib-metadata
+    - pyyaml >=3.13
+    - packaging >=19.0
 
 test:
   requires:
