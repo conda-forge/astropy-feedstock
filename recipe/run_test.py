@@ -1,7 +1,7 @@
 import platform
 
 # import astropy._compiler
-import astropy.cosmology.scalar_inv_efuncs
+import astropy.cosmology.flrw.scalar_inv_efuncs
 import astropy.io.ascii.cparser
 import astropy.io.fits.compression
 import astropy.io.votable.tablewriter
