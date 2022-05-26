@@ -1,4 +1,4 @@
-{% set version = "5.0.4" %}
+{% set version = "5.1" %}
 
 package:
   name: astropy
@@ -6,10 +6,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: 001184f1a9c3f526a363883ce28efb9cbf076df3d151ca3e131509a248f0dfb9
+  sha256: 1db1b2c7eddfc773ca66fa33bd07b25d5b9c3b5eee2b934e0ca277fa5b1b7b7e
 
 build:
-  detect_binary_files_with_prefix: false
   entry_points:
     - fits2bitmap = astropy.visualization.scripts.fits2bitmap:main
     - fitscheck = astropy.io.fits.scripts.fitscheck:main
