@@ -1,4 +1,4 @@
-{% set version = "5.1.1" %}
+{% set version = "5.2" %}
 
 package:
   name: astropy
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: ba4bd696af7090fd399b464c704bf27b5633121e461785edc70432606a94bd81
+  sha256: d335604025f6e16f7c9bf82d5ba28e5db4745a82e5823a9d17bdd9b9bd46b2a2
 
 build:
   entry_points:
@@ -18,7 +18,7 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<38]
 
