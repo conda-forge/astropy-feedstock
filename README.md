@@ -1,11 +1,11 @@
-About astropy
-=============
+About astropy-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/astropy-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.astropy.org/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/astropy-feedstock/blob/main/LICENSE.txt)
 
 Summary: Community-developed Python Library for Astronomy
 
