@@ -20,7 +20,7 @@ build:
     - wcslint = astropy.wcs.wcslint:main
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<38]
+  skip: true  # [py<39]
 
 requirements:
   build:
