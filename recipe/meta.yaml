@@ -1,4 +1,4 @@
-{% set version = "5.3.3" %}
+{% set version = "5.3.4" %}
 
 package:
   name: astropy
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: 0330df9f5d7a2254367e9b8cf44255ba1070b06123188c6a72edc180493f93bb
+  sha256: d490f7e2faac2ccc01c9244202d629154259af8a979104ced89dc4ace4e6f1d8
 
 build:
   entry_points:
