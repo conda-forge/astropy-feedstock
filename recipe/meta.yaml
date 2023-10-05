@@ -18,7 +18,7 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<39]
 
@@ -33,9 +33,8 @@ requirements:
     - python
     - pip
     - setuptools
-    - jinja2 =3.0.3
-    - markupsafe =2.1.1
-    - cython
+    - jinja2 >=3
+    - cython 0.29.36
     - setuptools_scm >=6.2
     - extension-helpers
     - numpy
