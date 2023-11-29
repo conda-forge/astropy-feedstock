@@ -42,6 +42,7 @@ requirements:
     - python
     - {{ pin_compatible("numpy") }}
     - pyerfa >=2.0
+    - astropy-iers-data
     - importlib-metadata
     - pyyaml >=3.13
     - packaging >=19.0
