@@ -27,7 +27,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython >=3.0.0,<3.1.0                          # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
+    - numpy >=2.0.0rc1                                 # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
@@ -38,11 +38,11 @@ requirements:
     - cython >=3.0.0,<3.1.0
     - setuptools_scm >=6.2
     - extension-helpers =1
-    - numpy
+    - numpy >=2.0.0rc1
   run:
     - python
     - {{ pin_compatible("numpy") }}
-    - numpy <2
+    - numpy >1.23
     - pyerfa >=2.0.1.1
     - astropy-iers-data >=0.2024.4.29.0.28.48
     - importlib-metadata
