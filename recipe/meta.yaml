@@ -20,7 +20,7 @@ build:
     - wcslint = astropy.wcs.wcslint:main
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<39]
+  skip: true  # [py<310]
 
 requirements:
   build:
@@ -44,7 +44,7 @@ requirements:
     - {{ pin_compatible("numpy") }}
     - numpy <2
     - pyerfa >=2.0.1.1
-    - astropy-iers-data >=0.2024.2.26.0.28.55
+    - astropy-iers-data >=0.2024.4.29.0.28.48
     - importlib-metadata
     - pyyaml >=3.13
     - packaging >=19.0
