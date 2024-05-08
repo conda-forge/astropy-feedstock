@@ -7,6 +7,8 @@ package:
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
   sha256: 6c3b915f10b1576190730ddce45f6245f9927dda3de6e3f692db45779708950f
+  patches:
+    - pyproject.toml.patch
 
 build:
   entry_points:
@@ -27,7 +29,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython >=3.0.0,<3.1.0                          # [build_platform != target_platform]
-    - numpy >=2.0.0rc1                                 # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
@@ -38,7 +40,7 @@ requirements:
     - cython >=3.0.0,<3.1.0
     - setuptools_scm >=6.2
     - extension-helpers =1
-    - numpy >=2.0.0rc1
+    - numpy
   run:
     - python
     - {{ pin_compatible("numpy") }}
