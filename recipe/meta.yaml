@@ -44,7 +44,6 @@ requirements:
   run:
     - python
     - {{ pin_compatible("numpy") }}
-    - numpy >1.23
     - pyerfa >=2.0.1.1
     - astropy-iers-data >=0.2024.4.29.0.28.48
     - importlib-metadata
