@@ -1,4 +1,4 @@
-{% set version = "6.0.1" %}
+{% set version = "6.1.0" %}
 
 package:
   name: astropy
@@ -6,7 +6,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: 89a975de356d0608e74f1f493442fb3acbbb7a85b739e074460bb0340014b39c
+  sha256: 6c3b915f10b1576190730ddce45f6245f9927dda3de6e3f692db45779708950f
+  patches:
+    - pyproject.toml.patch
 
 build:
   entry_points:
@@ -20,7 +22,7 @@ build:
     - wcslint = astropy.wcs.wcslint:main
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<39]
+  skip: true  # [py<310]
 
 requirements:
   build:
@@ -29,6 +31,7 @@ requirements:
     - cython >=3.0.0,<3.1.0                          # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
@@ -41,9 +44,8 @@ requirements:
   run:
     - python
     - {{ pin_compatible("numpy") }}
-    - numpy <2
     - pyerfa >=2.0.1.1
-    - astropy-iers-data >=0.2024.2.26.0.28.55
+    - astropy-iers-data >=0.2024.4.29.0.28.48
     - importlib-metadata
     - pyyaml >=3.13
     - packaging >=19.0
