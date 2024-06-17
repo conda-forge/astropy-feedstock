@@ -7,8 +7,6 @@ package:
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
   sha256: e5c6f45d911c30acb8d556c7f8ed994aec71b108e61eee5067f00af1e4e36138
-  patches:
-    - pyproject.toml.patch
 
 build:
   entry_points:
