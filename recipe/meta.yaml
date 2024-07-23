@@ -18,7 +18,7 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<310]
 
@@ -41,7 +41,8 @@ requirements:
     - numpy
   run:
     - python
-    - numpy >=1.23
+    - numpy >=1.23  # [not win]
+    - numpy >=1.23,<2  #[win]
     - pyerfa >=2.0.1.1
     - astropy-iers-data >=0.2024.5.27.0.30.8
     - importlib-metadata
