@@ -1,4 +1,4 @@
-{% set version = "6.1.1" %}
+{% set version = "6.1.2" %}
 
 package:
   name: astropy
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: e5c6f45d911c30acb8d556c7f8ed994aec71b108e61eee5067f00af1e4e36138
+  sha256: a2103d4e24e90389a820cfcdaaf4ca2d1ab22e5fd72978d147ff5cace54f1d3a
 
 build:
   entry_points:
@@ -18,7 +18,7 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<310]
 
@@ -41,11 +41,9 @@ requirements:
     - numpy
   run:
     - python
-    # DROP THE WINDOWS-SPECIFIC CONSTRAINT FOR ASTROPY versions 6.1.2 and up
-    - numpy >=1.23  # [not win]
-    - numpy >=1.23,<2  # [win]
+    - numpy >=1.23
     - pyerfa >=2.0.1.1
-    - astropy-iers-data >=0.2024.5.27.0.30.8
+    - astropy-iers-data >=0.2024.7.1.0.34.3
     - importlib-metadata
     - pyyaml >=3.13
     - packaging >=19.0
