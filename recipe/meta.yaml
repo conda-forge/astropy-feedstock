@@ -41,6 +41,7 @@ requirements:
     - numpy
   run:
     - python
+    # DROP THE WINDOWS-SPECIFIC CONSTRAINT FOR ASTROPY versions 6.1.2 and up
     - numpy >=1.23  # [not win]
     - numpy >=1.23,<2  # [win]
     - pyerfa >=2.0.1.1
