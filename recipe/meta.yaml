@@ -42,7 +42,7 @@ requirements:
   run:
     - python
     - numpy >=1.23  # [not win]
-    - numpy >=1.23,<2  #[win]
+    - numpy >=1.23,<2  # [win]
     - pyerfa >=2.0.1.1
     - astropy-iers-data >=0.2024.5.27.0.30.8
     - importlib-metadata
