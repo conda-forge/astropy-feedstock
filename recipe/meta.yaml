@@ -19,15 +19,32 @@ build:
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
   number: 3
-  script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<310]
 
 requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython >=3.0.0,<3.1.0                  # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
+    - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
+    - python
+    - pip
+    - setuptools
+    - jinja2 >=3
+    - cython >=3.0.0,<3.1.0
+    - setuptools_scm >=6.2
+    - extension-helpers =1
+    - numpy
+  run:
     - python
 
 outputs:
   - name: astropy-base
+    build:
+      script: {{ PYTHON }} -m pip install . -vv
+      skip: true  # [py<310]
     requirements:
       build:
         - python                                 # [build_platform != target_platform]
@@ -73,6 +90,8 @@ outputs:
         - astropy
 
   - name: astropy
+    build:
+      skip: true  # [py<310]
     requirements:
       host:
         - python
