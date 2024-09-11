@@ -51,7 +51,7 @@ requirements:
     - packaging >=19.0
     # Recommended deps
     - scipy >=1.8
-    - matplotlib-base >=3.3,!=3.4.0,!=3.5.2
+    - matplotlib-base >=3.5.0,!=3.5.2
 
 test:
   requires:
