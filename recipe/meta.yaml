@@ -109,7 +109,6 @@ outputs:
         - pytz
         - jplephem
         - mpmath
-        - asdf-astropy >=0.3
         - bottleneck
         - fsspec[http] >=2023.4.0
         - s3fs >=2023.4.0
