@@ -70,9 +70,7 @@ outputs:
         - importlib-metadata
         - pyyaml >=3.13
         - packaging >=19.0
-        # Recommended deps
         - scipy >=1.8
-        - matplotlib-base >=3.5.0,!=3.5.2
 
     test:
       requires:
@@ -98,6 +96,7 @@ outputs:
       run:
         - python
         - {{ pin_subpackage('astropy-base', max_pin="x.x.x") }}
+        - matplotlib-base >=3.5.0,!=3.5.2
         - certifi
         - dask[array] >=2022.8.1
         - h5py
