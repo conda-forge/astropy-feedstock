@@ -5,13 +5,13 @@ MACOSX_SDK_VERSION:
 c_compiler:
 - clang
 c_compiler_version:
-- '16'
+- '17'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
 - '10.13'
 channel_sources:
-- conda-forge/label/numpy_rc,conda-forge
+- conda-forge
 channel_targets:
 - conda-forge main
 macos_machine:
@@ -29,3 +29,4 @@ target_platform:
 zip_keys:
 - - python
   - numpy
+  - channel_sources
