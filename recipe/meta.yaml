@@ -91,7 +91,7 @@ outputs:
 
   - name: astropy
     build:
-      skip: true  # [py<310]
+      skip: true  # [py<310 and py>312]
     requirements:
       host:
         - python
