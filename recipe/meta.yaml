@@ -10,7 +10,7 @@ source:
 
 build:
   number: 3
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [py<310]
   entry_points:
     - fits2bitmap = astropy.visualization.scripts.fits2bitmap:main
@@ -72,14 +72,11 @@ outputs:
     build:
       noarch: generic
     requirements:
-      host:
-        - python
       run:
-        - python
         - {{ pin_subpackage('astropy-base', max_pin="x.x.x") }}
         - matplotlib-base >=3.5.0,!=3.5.2
         - certifi
-        - dask[array] >=2022.8.1
+        - dask-core >=2022.8.1  # We also need numpy (dask[array]) but we are already going to install that.
         - h5py
         - pyarrow >=10.0.1
         - beautifulsoup4
@@ -91,7 +88,7 @@ outputs:
         - jplephem
         - mpmath
         - bottleneck
-        - fsspec[http] >=2023.4.0
+        - fsspec >=2023.4.0  # TODO: Decide if we need to add the aiohttp dependancy for fsspec[http]
 {% endif %}
 
 about:
