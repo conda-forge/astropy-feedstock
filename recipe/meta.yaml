@@ -71,7 +71,6 @@ outputs:
   - name: astropy
     build:
       noarch: generic
-      skip: true  # [py<310 and py>312]
     requirements:
       host:
         - python
