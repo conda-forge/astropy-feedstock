@@ -1,4 +1,3 @@
-# recipe/conda_build_config.yaml
 astropy_outputs:
-  - all    # [linux64 and py310]
-  - base   # [not (linux64 and py310])]
+  - all
+  - base

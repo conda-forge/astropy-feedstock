@@ -67,7 +67,7 @@ test:
 outputs:
   - name: astropy-base
 
-{% if astropy_outputs == "all" %}
+{% if astropy_outputs == "all" and py==310 and linux64 %}
   - name: astropy
     build:
       noarch: generic
