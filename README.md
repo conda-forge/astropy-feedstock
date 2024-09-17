@@ -36,171 +36,339 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_numpy2.0python3.10.____cpython</td>
+              <td>linux_64_astropy_outputsallnumpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_numpy2.0python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_astropy_outputsallnumpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_numpy2.0python3.11.____cpython</td>
+              <td>linux_64_astropy_outputsallnumpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_numpy2.0python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_astropy_outputsallnumpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_numpy2.0python3.12.____cpython</td>
+              <td>linux_64_astropy_outputsallnumpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_numpy2.0python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_astropy_outputsallnumpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_numpy2python3.13.____cp313</td>
+              <td>linux_64_astropy_outputsallnumpy2python3.13.____cp313</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_numpy2python3.13.____cp313" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_astropy_outputsallnumpy2python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_numpy2.0python3.10.____cpython</td>
+              <td>linux_64_astropy_outputsbasenumpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy2.0python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_astropy_outputsbasenumpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_numpy2.0python3.11.____cpython</td>
+              <td>linux_64_astropy_outputsbasenumpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy2.0python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_astropy_outputsbasenumpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_numpy2.0python3.12.____cpython</td>
+              <td>linux_64_astropy_outputsbasenumpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy2.0python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_astropy_outputsbasenumpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_aarch64_numpy2python3.13.____cp313</td>
+              <td>linux_64_astropy_outputsbasenumpy2python3.13.____cp313</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_numpy2python3.13.____cp313" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_astropy_outputsbasenumpy2python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_numpy2.0python3.10.____cpython</td>
+              <td>linux_aarch64_astropy_outputsallnumpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_numpy2.0python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_astropy_outputsallnumpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_numpy2.0python3.11.____cpython</td>
+              <td>linux_aarch64_astropy_outputsallnumpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_numpy2.0python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_astropy_outputsallnumpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_numpy2.0python3.12.____cpython</td>
+              <td>linux_aarch64_astropy_outputsallnumpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_numpy2.0python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_astropy_outputsallnumpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_ppc64le_numpy2python3.13.____cp313</td>
+              <td>linux_aarch64_astropy_outputsallnumpy2python3.13.____cp313</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_numpy2python3.13.____cp313" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_astropy_outputsallnumpy2python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_numpy2.0python3.10.____cpython</td>
+              <td>linux_aarch64_astropy_outputsbasenumpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_numpy2.0python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_astropy_outputsbasenumpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_numpy2.0python3.11.____cpython</td>
+              <td>linux_aarch64_astropy_outputsbasenumpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_numpy2.0python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_astropy_outputsbasenumpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_numpy2.0python3.12.____cpython</td>
+              <td>linux_aarch64_astropy_outputsbasenumpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_numpy2.0python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_astropy_outputsbasenumpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_numpy2python3.13.____cp313</td>
+              <td>linux_aarch64_astropy_outputsbasenumpy2python3.13.____cp313</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_numpy2python3.13.____cp313" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_astropy_outputsbasenumpy2python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_numpy2.0python3.10.____cpython</td>
+              <td>linux_ppc64le_astropy_outputsallnumpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy2.0python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_astropy_outputsallnumpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_numpy2.0python3.11.____cpython</td>
+              <td>linux_ppc64le_astropy_outputsallnumpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy2.0python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_astropy_outputsallnumpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_numpy2.0python3.12.____cpython</td>
+              <td>linux_ppc64le_astropy_outputsallnumpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy2.0python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_astropy_outputsallnumpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_numpy2python3.13.____cp313</td>
+              <td>linux_ppc64le_astropy_outputsallnumpy2python3.13.____cp313</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy2python3.13.____cp313" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_astropy_outputsallnumpy2python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_numpy2.0python3.10.____cpython</td>
+              <td>linux_ppc64le_astropy_outputsbasenumpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=win&configuration=win%20win_64_numpy2.0python3.10.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_astropy_outputsbasenumpy2.0python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_numpy2.0python3.11.____cpython</td>
+              <td>linux_ppc64le_astropy_outputsbasenumpy2.0python3.11.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=win&configuration=win%20win_64_numpy2.0python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_astropy_outputsbasenumpy2.0python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_numpy2.0python3.12.____cpython</td>
+              <td>linux_ppc64le_astropy_outputsbasenumpy2.0python3.12.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=win&configuration=win%20win_64_numpy2.0python3.12.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_astropy_outputsbasenumpy2.0python3.12.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_numpy2python3.13.____cp313</td>
+              <td>linux_ppc64le_astropy_outputsbasenumpy2python3.13.____cp313</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=win&configuration=win%20win_64_numpy2python3.13.____cp313" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_astropy_outputsbasenumpy2python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_astropy_outputsallnumpy2.0python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_astropy_outputsallnumpy2.0python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_astropy_outputsallnumpy2.0python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_astropy_outputsallnumpy2.0python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_astropy_outputsallnumpy2.0python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_astropy_outputsallnumpy2.0python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_astropy_outputsallnumpy2python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_astropy_outputsallnumpy2python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_astropy_outputsbasenumpy2.0python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_astropy_outputsbasenumpy2.0python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_astropy_outputsbasenumpy2.0python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_astropy_outputsbasenumpy2.0python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_astropy_outputsbasenumpy2.0python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_astropy_outputsbasenumpy2.0python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_astropy_outputsbasenumpy2python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_astropy_outputsbasenumpy2python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_astropy_outputsallnumpy2.0python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_astropy_outputsallnumpy2.0python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_astropy_outputsallnumpy2.0python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_astropy_outputsallnumpy2.0python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_astropy_outputsallnumpy2.0python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_astropy_outputsallnumpy2.0python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_astropy_outputsallnumpy2python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_astropy_outputsallnumpy2python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_astropy_outputsbasenumpy2.0python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_astropy_outputsbasenumpy2.0python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_astropy_outputsbasenumpy2.0python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_astropy_outputsbasenumpy2.0python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_astropy_outputsbasenumpy2.0python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_astropy_outputsbasenumpy2.0python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_astropy_outputsbasenumpy2python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_astropy_outputsbasenumpy2python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_astropy_outputsallnumpy2.0python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=win&configuration=win%20win_64_astropy_outputsallnumpy2.0python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_astropy_outputsallnumpy2.0python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=win&configuration=win%20win_64_astropy_outputsallnumpy2.0python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_astropy_outputsallnumpy2.0python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=win&configuration=win%20win_64_astropy_outputsallnumpy2.0python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_astropy_outputsallnumpy2python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=win&configuration=win%20win_64_astropy_outputsallnumpy2python3.13.____cp313" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_astropy_outputsbasenumpy2.0python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=win&configuration=win%20win_64_astropy_outputsbasenumpy2.0python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_astropy_outputsbasenumpy2.0python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=win&configuration=win%20win_64_astropy_outputsbasenumpy2.0python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_astropy_outputsbasenumpy2.0python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=win&configuration=win%20win_64_astropy_outputsbasenumpy2.0python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_astropy_outputsbasenumpy2python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=60&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/astropy-feedstock?branchName=main&jobName=win&configuration=win%20win_64_astropy_outputsbasenumpy2python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr>
@@ -216,6 +384,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-astropy-green.svg)](https://anaconda.org/conda-forge/astropy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/astropy.svg)](https://anaconda.org/conda-forge/astropy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/astropy.svg)](https://anaconda.org/conda-forge/astropy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/astropy.svg)](https://anaconda.org/conda-forge/astropy) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-astropy--base-green.svg)](https://anaconda.org/conda-forge/astropy-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/astropy-base.svg)](https://anaconda.org/conda-forge/astropy-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/astropy-base.svg)](https://anaconda.org/conda-forge/astropy-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/astropy-base.svg)](https://anaconda.org/conda-forge/astropy-base) |
 
 Installing astropy
@@ -228,41 +397,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `astropy-base` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `astropy, astropy-base` can be installed with `conda`:
 
 ```
-conda install astropy-base
-```
-
-or with `mamba`:
-
-```
-mamba install astropy-base
-```
-
-It is possible to list all of the versions of `astropy-base` available on your platform with `conda`:
-
-```
-conda search astropy-base --channel conda-forge
+conda install astropy astropy-base
 ```
 
 or with `mamba`:
 
 ```
-mamba search astropy-base --channel conda-forge
+mamba install astropy astropy-base
+```
+
+It is possible to list all of the versions of `astropy` available on your platform with `conda`:
+
+```
+conda search astropy --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search astropy --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search astropy-base --channel conda-forge
+mamba repoquery search astropy --channel conda-forge
 
-# List packages depending on `astropy-base`:
-mamba repoquery whoneeds astropy-base --channel conda-forge
+# List packages depending on `astropy`:
+mamba repoquery whoneeds astropy --channel conda-forge
 
-# List dependencies of `astropy-base`:
-mamba repoquery depends astropy-base --channel conda-forge
+# List dependencies of `astropy`:
+mamba repoquery depends astropy --channel conda-forge
 ```
 
 
