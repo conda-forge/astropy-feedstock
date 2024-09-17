@@ -76,7 +76,8 @@ outputs:
         - {{ pin_subpackage('astropy-base', max_pin="x.x.x") }}
         - matplotlib-base >=3.5.0,!=3.5.2
         - certifi
-        - dask-core >=2022.8.1  # We also need numpy (dask[array]) but we are already going to install that.
+        # We also need numpy (dask[array]) but we are already going to install that.
+        - dask-core >=2022.8.1
         - h5py
         - pyarrow >=10.0.1
         - beautifulsoup4
@@ -88,7 +89,8 @@ outputs:
         - jplephem
         - mpmath
         - bottleneck
-        - fsspec >=2023.4.0  # TODO: Decide if we need to add the aiohttp dependancy for fsspec[http]
+        # TODO: Decide if we need to add the aiohttp dependancy for fsspec[http]
+        - fsspec >=2023.4.0
 {% endif %}
 
 about:
