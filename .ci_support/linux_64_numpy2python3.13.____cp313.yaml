@@ -1,3 +1,5 @@
+astropy_outputs:
+- base
 c_compiler:
 - gcc
 c_compiler_version:

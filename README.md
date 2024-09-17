@@ -216,7 +216,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-astropy-green.svg)](https://anaconda.org/conda-forge/astropy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/astropy.svg)](https://anaconda.org/conda-forge/astropy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/astropy.svg)](https://anaconda.org/conda-forge/astropy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/astropy.svg)](https://anaconda.org/conda-forge/astropy) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-astropy--base-green.svg)](https://anaconda.org/conda-forge/astropy-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/astropy-base.svg)](https://anaconda.org/conda-forge/astropy-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/astropy-base.svg)](https://anaconda.org/conda-forge/astropy-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/astropy-base.svg)](https://anaconda.org/conda-forge/astropy-base) |
 
 Installing astropy
 ==================
@@ -228,41 +228,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `astropy` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `astropy-base` can be installed with `conda`:
 
 ```
-conda install astropy
-```
-
-or with `mamba`:
-
-```
-mamba install astropy
-```
-
-It is possible to list all of the versions of `astropy` available on your platform with `conda`:
-
-```
-conda search astropy --channel conda-forge
+conda install astropy-base
 ```
 
 or with `mamba`:
 
 ```
-mamba search astropy --channel conda-forge
+mamba install astropy-base
+```
+
+It is possible to list all of the versions of `astropy-base` available on your platform with `conda`:
+
+```
+conda search astropy-base --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search astropy-base --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search astropy --channel conda-forge
+mamba repoquery search astropy-base --channel conda-forge
 
-# List packages depending on `astropy`:
-mamba repoquery whoneeds astropy --channel conda-forge
+# List packages depending on `astropy-base`:
+mamba repoquery whoneeds astropy-base --channel conda-forge
 
-# List dependencies of `astropy`:
-mamba repoquery depends astropy --channel conda-forge
+# List dependencies of `astropy-base`:
+mamba repoquery depends astropy-base --channel conda-forge
 ```
 
 
@@ -332,6 +332,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@Cadair](https://github.com/Cadair/)
 * [@astrofrog](https://github.com/astrofrog/)
 * [@bsipocz](https://github.com/bsipocz/)
 * [@mwcraig](https://github.com/mwcraig/)
