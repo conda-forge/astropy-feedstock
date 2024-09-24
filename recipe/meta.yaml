@@ -1,4 +1,7 @@
 {% set version = "6.1.3" %}
+{% set min_py = "310" %}
+# handle undefined PYTHON in `noarch: generic` outputs
+{% if PYTHON is not defined %}{% set PYTHON = "$PYTHON" %}{% endif %}
 
 package:
   name: astropy-base
@@ -10,7 +13,6 @@ source:
 
 build:
   number: 3
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [py<310]
   entry_points:
     - fits2bitmap = astropy.visualization.scripts.fits2bitmap:main
@@ -66,17 +68,21 @@ test:
 
 outputs:
   - name: astropy-base
+    build:
+      script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
-{% if astropy_outputs == "all" and py==310 and linux64 %}
+# build this exactly once, on the oldest supported python, to avoid migration issues
+{% if astropy_outputs == "all" and py==min_py and linux64 %}
   - name: astropy
     build:
       noarch: generic
+      skip: true  # [(not py==310) and (not linux64)]
     requirements:
       run:
         - {{ pin_subpackage('astropy-base', max_pin="x.x.x") }}
         - matplotlib-base >=3.5.0,!=3.5.2
         - certifi
-        # We also need numpy (dask[array]) but we are already going to install that.
+        # We also need numpy from dask[array] but we are already going to install that.
         - dask-core >=2022.8.1
         - h5py
         - pyarrow >=10.0.1
