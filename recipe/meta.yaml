@@ -98,8 +98,10 @@ outputs:
         - jplephem
         - mpmath
         - bottleneck
-        # TODO: Decide if we need to add the aiohttp dependancy for fsspec[http]
         - fsspec >=2023.4.0
+        # fsspec optional deps
+        - aiohttp
+        - s3fs
     test:
       requires:
         - pytest-astropy
