@@ -217,6 +217,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-astropy-green.svg)](https://anaconda.org/conda-forge/astropy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/astropy.svg)](https://anaconda.org/conda-forge/astropy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/astropy.svg)](https://anaconda.org/conda-forge/astropy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/astropy.svg)](https://anaconda.org/conda-forge/astropy) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-astropy--base-green.svg)](https://anaconda.org/conda-forge/astropy-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/astropy-base.svg)](https://anaconda.org/conda-forge/astropy-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/astropy-base.svg)](https://anaconda.org/conda-forge/astropy-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/astropy-base.svg)](https://anaconda.org/conda-forge/astropy-base) |
 
 Installing astropy
 ==================
@@ -228,16 +229,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `astropy` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `astropy, astropy-base` can be installed with `conda`:
 
 ```
-conda install astropy
+conda install astropy astropy-base
 ```
 
 or with `mamba`:
 
 ```
-mamba install astropy
+mamba install astropy astropy-base
 ```
 
 It is possible to list all of the versions of `astropy` available on your platform with `conda`:
@@ -332,6 +333,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@Cadair](https://github.com/Cadair/)
 * [@astrofrog](https://github.com/astrofrog/)
 * [@bsipocz](https://github.com/bsipocz/)
 * [@mwcraig](https://github.com/mwcraig/)
