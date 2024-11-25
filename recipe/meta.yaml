@@ -1,6 +1,6 @@
 {% set version = "7.0.0" %}
 {% set python_min = python_min | default("3.11") %}
-{% set PYTHON = PTYHON | default("$PYTHON") %}
+{% set PYTHON = PYTHON | default("$PYTHON") %}
 {% set min_py = python_min | replace('.', '') | int %}
 # handle undefined PYTHON/py in `noarch: generic` outputs
 {% if py is not defined %}{% set py = min_py %}{% endif %}
@@ -83,7 +83,7 @@ outputs:
   - name: astropy
     build:
       noarch: generic
-      skip: true  # [(not py==310) and (not linux64)]
+      skip: true
     requirements:
       run:
         - {{ pin_subpackage('astropy-base', max_pin="x.x.x") }}
@@ -110,6 +110,7 @@ outputs:
       requires:
         - pytest-astropy
       commands:
+        - pip check
         - fits2bitmap --help
         - fitscheck --help
         - fitsdiff --help
