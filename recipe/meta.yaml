@@ -53,6 +53,7 @@ requirements:
     - pyyaml >=3.13
     - packaging >=19.0
     - scipy >=1.8
+  run_constrained:
     # We must prevent installing old astropy and new astropy-base together
     - astropy >=7.0.0
 
