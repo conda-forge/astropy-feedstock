@@ -48,7 +48,7 @@ requirements:
     - python
     - numpy >=1.23
     - pyerfa >=2.0.1.1
-    - astropy-iers-data >=0.2024.8.27.10.28.29
+    - astropy-iers-data >=0.2024.10.28.0.34.7
     - importlib-metadata
     - pyyaml >=3.13
     - packaging >=19.0
