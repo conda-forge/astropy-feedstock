@@ -1,8 +1,8 @@
 {% set version = "7.0.0" %}
-{% set min_py = 311 %}
+{% set python_min = python_min | default("3.11") %}
+{% set PYTHON = PTYHON | default("$PYTHON") %}
 # handle undefined PYTHON/py in `noarch: generic` outputs
-{% if py is not defined %}{% set py = min_py %}{% endif %}
-{% if PYTHON is not defined %}{% set PYTHON = "$PYTHON" %}{% endif %}
+{% if py is not defined %}{% set py = python_min %}{% endif %}
 
 package:
   name: astropy-base
@@ -14,7 +14,7 @@ source:
 
 build:
   number: 0
-  {% if py < min_py %}
+  {% if py < python_min %}
   skip: true
   {% endif %}
   entry_points:
@@ -78,7 +78,7 @@ outputs:
       script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 # build this exactly once, on the oldest supported python, to avoid migration issues
-{% if py==min_py and linux64 %}
+{% if py==python_min and linux64 %}
   - name: astropy
     build:
       noarch: generic
