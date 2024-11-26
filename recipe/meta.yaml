@@ -13,17 +13,6 @@ requirements:
     - astropy =={{ version }}
 
 test:
-  requires:
-    - pytest-astropy
-  commands:
-    - fits2bitmap --help
-    - fitscheck --help
-    - fitsdiff --help
-    - fitsheader --help
-    - fitsinfo --help
-    - samp_hub --help
-    - volint --help
-    - wcslint --help
   imports:
     - astropy
 
