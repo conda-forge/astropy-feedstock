@@ -1,10 +1,6 @@
-{% set version = "7.0.0" %}
-{% set python_min = python_min | default("3.11") %}
-{% set PYTHON = PYTHON | default("$PYTHON") %}   # [unix]
-{% set PYTHON = PYTHON | default("%PYTHON%") %}  # [win]
-{% set min_py = python_min | replace('.', '') | int %}
-# handle undefined PYTHON/py in `noarch: generic` outputs
-{% if py is not defined %}{% set py = min_py %}{% endif %}
+{% set version = "7.0.0" -%}
+{% set python_min = python_min | default("3.11") -%}
+{% set min_py = python_min | replace('.', '') | int -%}
 
 package:
   name: astropy-base
@@ -83,10 +79,12 @@ outputs:
 {% if py==min_py and linux64 %}
   - name: astropy
     build:
-      noarch: generic
-      skip: true
+      noarch: python
     requirements:
+      host:
+        - python {{ python_min }}
       run:
+        - python >={{ python_min }}
         - {{ pin_subpackage('astropy-base', max_pin="x.x.x") }}
         - matplotlib-base >=3.5.0,!=3.5.2
         - certifi
@@ -109,6 +107,7 @@ outputs:
         - s3fs
     test:
       requires:
+        - python {{ python_min }}
         - pytest-astropy
       commands:
         - pip check
