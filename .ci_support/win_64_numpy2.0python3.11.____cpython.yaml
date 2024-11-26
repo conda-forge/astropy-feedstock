@@ -1,3 +1,5 @@
+ace:
+- 8.0.1
 c_compiler:
 - vs2019
 c_stdlib:
@@ -14,6 +16,8 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - 3.11.* *_cpython
+python_min:
+- '3.11'
 target_platform:
 - win-64
 zip_keys:
