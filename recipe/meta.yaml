@@ -68,6 +68,11 @@ test:
     - samp_hub --help
     - volint --help
     - wcslint --help
+    # We run a subset of the tests which are the most likely to have
+    # issues because they rely on C extensions and bundled libraries
+    - pytest --pyargs astropy.wcs astropy.io.fits
+    # Skipping most tests on aarch64/ppc64le because they take too long
+    - pytest --pyargs astropy.time astropy.convolution astropy.io.ascii # [not (ppc64le or aarch64)]
   imports:
     - astropy
 
