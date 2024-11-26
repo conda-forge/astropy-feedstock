@@ -8,6 +8,254 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
+      linux_64_old_astropy_version1.3:
+        CONFIG: linux_64_old_astropy_version1.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version1.3.1:
+        CONFIG: linux_64_old_astropy_version1.3.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version1.3.2:
+        CONFIG: linux_64_old_astropy_version1.3.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version1.3.3:
+        CONFIG: linux_64_old_astropy_version1.3.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0:
+        CONFIG: linux_64_old_astropy_version2.0
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.1:
+        CONFIG: linux_64_old_astropy_version2.0.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.10:
+        CONFIG: linux_64_old_astropy_version2.0.10
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.11:
+        CONFIG: linux_64_old_astropy_version2.0.11
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.12:
+        CONFIG: linux_64_old_astropy_version2.0.12
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.13:
+        CONFIG: linux_64_old_astropy_version2.0.13
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.14:
+        CONFIG: linux_64_old_astropy_version2.0.14
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.15:
+        CONFIG: linux_64_old_astropy_version2.0.15
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.16:
+        CONFIG: linux_64_old_astropy_version2.0.16
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.2:
+        CONFIG: linux_64_old_astropy_version2.0.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.3:
+        CONFIG: linux_64_old_astropy_version2.0.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.4:
+        CONFIG: linux_64_old_astropy_version2.0.4
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.5:
+        CONFIG: linux_64_old_astropy_version2.0.5
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.6:
+        CONFIG: linux_64_old_astropy_version2.0.6
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.7:
+        CONFIG: linux_64_old_astropy_version2.0.7
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.8:
+        CONFIG: linux_64_old_astropy_version2.0.8
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version2.0.9:
+        CONFIG: linux_64_old_astropy_version2.0.9
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.0:
+        CONFIG: linux_64_old_astropy_version3.0
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.0.1:
+        CONFIG: linux_64_old_astropy_version3.0.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.0.2:
+        CONFIG: linux_64_old_astropy_version3.0.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.0.3:
+        CONFIG: linux_64_old_astropy_version3.0.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.0.4:
+        CONFIG: linux_64_old_astropy_version3.0.4
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.0.5:
+        CONFIG: linux_64_old_astropy_version3.0.5
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.1:
+        CONFIG: linux_64_old_astropy_version3.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.1.1:
+        CONFIG: linux_64_old_astropy_version3.1.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.1.2:
+        CONFIG: linux_64_old_astropy_version3.1.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.2:
+        CONFIG: linux_64_old_astropy_version3.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.2.1:
+        CONFIG: linux_64_old_astropy_version3.2.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.2.2:
+        CONFIG: linux_64_old_astropy_version3.2.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version3.2.3:
+        CONFIG: linux_64_old_astropy_version3.2.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version4.0:
+        CONFIG: linux_64_old_astropy_version4.0
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version4.0.1.post1:
+        CONFIG: linux_64_old_astropy_version4.0.1.post1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version4.0.2:
+        CONFIG: linux_64_old_astropy_version4.0.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version4.0.3:
+        CONFIG: linux_64_old_astropy_version4.0.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version4.0.4:
+        CONFIG: linux_64_old_astropy_version4.0.4
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version4.0.6:
+        CONFIG: linux_64_old_astropy_version4.0.6
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version4.1:
+        CONFIG: linux_64_old_astropy_version4.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version4.2:
+        CONFIG: linux_64_old_astropy_version4.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version4.2.1:
+        CONFIG: linux_64_old_astropy_version4.2.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version4.3:
+        CONFIG: linux_64_old_astropy_version4.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version4.3.1:
+        CONFIG: linux_64_old_astropy_version4.3.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version4.3.post1:
+        CONFIG: linux_64_old_astropy_version4.3.post1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.0:
+        CONFIG: linux_64_old_astropy_version5.0
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.0.1:
+        CONFIG: linux_64_old_astropy_version5.0.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.0.2:
+        CONFIG: linux_64_old_astropy_version5.0.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.0.3:
+        CONFIG: linux_64_old_astropy_version5.0.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.0.4:
+        CONFIG: linux_64_old_astropy_version5.0.4
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.0.5:
+        CONFIG: linux_64_old_astropy_version5.0.5
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.0.6:
+        CONFIG: linux_64_old_astropy_version5.0.6
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.1:
+        CONFIG: linux_64_old_astropy_version5.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.1.1:
+        CONFIG: linux_64_old_astropy_version5.1.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.2:
+        CONFIG: linux_64_old_astropy_version5.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.2.1:
+        CONFIG: linux_64_old_astropy_version5.2.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.2.2:
+        CONFIG: linux_64_old_astropy_version5.2.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.3:
+        CONFIG: linux_64_old_astropy_version5.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.3.1:
+        CONFIG: linux_64_old_astropy_version5.3.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.3.2:
+        CONFIG: linux_64_old_astropy_version5.3.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version5.3.3:
+        CONFIG: linux_64_old_astropy_version5.3.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
       linux_64_old_astropy_version5.3.4:
         CONFIG: linux_64_old_astropy_version5.3.4
         UPLOAD_PACKAGES: 'True'
@@ -48,6 +296,7 @@ jobs:
         CONFIG: linux_64_old_astropy_version6.1.6
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+    maxParallel: 50
   timeoutInMinutes: 360
   variables: {}
 
