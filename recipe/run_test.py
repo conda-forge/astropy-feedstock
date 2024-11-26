@@ -23,4 +23,8 @@ if platform.machine() in ('aarch64', 'ppc64le'):
     test(package='wcs')
     test(package='io.fits')
 else:
-    test()
+    test(package='time')
+    test(package='wcs')
+    test(package='convolution')
+    test(package='io.ascii')
+    test(package='io.fits')
