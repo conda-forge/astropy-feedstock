@@ -11,20 +11,3 @@ import astropy.table._np_utils
 import astropy.utils._compiler
 import astropy.utils.xml._iterparser
 import astropy.wcs._wcs
-
-# We run a subset of the tests which are the most likely to have
-# issues because they rely on C extensions and bundled libraries
-
-from astropy import test
-
-
-if platform.machine() in ('aarch64', 'ppc64le'):
-    print('WARNING: Skipping most tests on aarch64/ppc64le because they take too long')
-    test(package='wcs')
-    test(package='io.fits')
-else:
-    test(package='time')
-    test(package='wcs')
-    test(package='convolution')
-    test(package='io.ascii')
-    test(package='io.fits')

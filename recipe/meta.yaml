@@ -1,60 +1,16 @@
-{% set version = "7.0.0" %}
-{% set python_min = python_min | default("3.11") %}
-{% set min_py = python_min | replace('.', '') | int %}
-{% set py = py | default(min_py) %}
+{% set version = old_astropy_version | default("6.1.6") %}
 
 package:
   name: astropy-base
   version: {{ version }}
 
-source:
-  url: https://pypi.org/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: e92d7c9fee86eb3df8714e5dd41bbf9f163d343e1a183d95bf6bd09e4313c940
-
 build:
   number: 0
-  {% if py < min_py %}
-  skip: true
-  {% endif %}
-  entry_points:
-    - fits2bitmap = astropy.visualization.scripts.fits2bitmap:main
-    - fitscheck = astropy.io.fits.scripts.fitscheck:main
-    - fitsdiff = astropy.io.fits.scripts.fitsdiff:main
-    - fitsheader = astropy.io.fits.scripts.fitsheader:main
-    - fitsinfo = astropy.io.fits.scripts.fitsinfo:main
-    - samp_hub = astropy.samp.hub_script:hub_script
-    - volint = astropy.io.votable.volint:main
-    - wcslint = astropy.wcs.wcslint:main
+  noarch: generic
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython >=3.0.0,<3.1.0                  # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
-  host:
-    - python
-    - pip
-    - setuptools
-    - jinja2 >=3
-    - cython >=3.0.0,<3.1.0
-    - setuptools_scm >=6.2
-    - extension-helpers =1
-    - numpy
   run:
-    - python
-    - numpy >=1.23
-    - pyerfa >=2.0.1.1
-    - astropy-iers-data >=0.2024.10.28.0.34.7
-    - importlib-metadata
-    - pyyaml >=3.13
-    - packaging >=19.0
-    - scipy >=1.8
-  run_constrained:
-    # We must prevent installing old astropy and new astropy-base together
-    - astropy >=7.0.0
+    - astropy =={{ version }}
 
 test:
   requires:
@@ -70,60 +26,6 @@ test:
     - wcslint --help
   imports:
     - astropy
-
-outputs:
-  - name: astropy-base
-    build:
-      script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-
-# build this exactly once, on the oldest supported python, to avoid migration issues
-{% if py==min_py and linux64 %}
-  - name: astropy
-    build:
-      noarch: python
-    requirements:
-      host:
-        - python {{ python_min }}
-      run:
-        - python >={{ python_min }}
-        - {{ pin_subpackage('astropy-base', max_pin="x.x.x") }}
-        - matplotlib-base >=3.5.0,!=3.5.2
-        - certifi
-        # We also need numpy from dask[array] but we are already going to install that.
-        - dask-core >=2022.8.1
-        - h5py
-        - pyarrow >=10.0.1
-        - beautifulsoup4
-        - html5lib
-        - bleach
-        - pandas >=2.0
-        - sortedcontainers
-        - pytz
-        - jplephem
-        - mpmath
-        - bottleneck
-        - fsspec >=2023.4.0
-        # fsspec optional deps
-        - aiohttp
-        - s3fs
-    test:
-      requires:
-        - python {{ python_min }}
-        - pytest-astropy
-      commands:
-        - pip check
-        - fits2bitmap --help
-        - fitscheck --help
-        - fitsdiff --help
-        - fitsheader --help
-        - fitsinfo --help
-        - samp_hub --help
-        - volint --help
-        - wcslint --help
-        - pytest --pyargs astropy
-      imports:
-        - astropy
-{% endif %}
 
 about:
   home: http://www.astropy.org/
