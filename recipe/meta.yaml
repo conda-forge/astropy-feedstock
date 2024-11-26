@@ -76,11 +76,11 @@ outputs:
     build:
       script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
-# build this exactly once, on the oldest supported python, to avoid migration issues
-{% if py==min_py and linux64 %}
   - name: astropy
     build:
       noarch: python
+      # build this exactly once, on the oldest supported python, to avoid migration issues
+      skip: true # [(not py=={{ min_py }}) and (not linux64)]
     requirements:
       host:
         - python {{ python_min }}
@@ -123,7 +123,6 @@ outputs:
         - pytest --pyargs astropy
       imports:
         - astropy
-{% endif %}
 
 about:
   home: http://www.astropy.org/
