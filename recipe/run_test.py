@@ -17,17 +17,10 @@ import astropy.wcs._wcs
 
 from astropy import test
 
-# Do not include the io.ascii tests unless/until this issue is fixed:
-# https://github.com/astropy/astropy/issues/9864
-#
-# They take more than two hours to run on some platforms!
-# test(package='io.ascii')
 
-if ((platform.machine() == 'aarch64') and
-    (platform.python_implementation().lower() != 'cpython')):
-    print('WARNING: Skipping tests on aarch64/PyPy because they take too long')
-
-else:
-    test(package='time')
+if platform.machine() in ('aarch64', 'ppc64le'):
+    print('WARNING: Skipping most tests on aarch64/ppc64le because they take too long')
     test(package='wcs')
-    test(package='convolution')
+    test(package='io.fits')
+else:
+    test()
