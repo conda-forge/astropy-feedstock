@@ -8,8 +8,44 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_:
-        CONFIG: linux_64_
+      linux_64_old_astropy_version5.3.4:
+        CONFIG: linux_64_old_astropy_version5.3.4
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version6.0.0:
+        CONFIG: linux_64_old_astropy_version6.0.0
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version6.0.1:
+        CONFIG: linux_64_old_astropy_version6.0.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version6.1.0:
+        CONFIG: linux_64_old_astropy_version6.1.0
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version6.1.1:
+        CONFIG: linux_64_old_astropy_version6.1.1
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version6.1.2:
+        CONFIG: linux_64_old_astropy_version6.1.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version6.1.3:
+        CONFIG: linux_64_old_astropy_version6.1.3
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version6.1.4:
+        CONFIG: linux_64_old_astropy_version6.1.4
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version6.1.5:
+        CONFIG: linux_64_old_astropy_version6.1.5
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_old_astropy_version6.1.6:
+        CONFIG: linux_64_old_astropy_version6.1.6
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
   timeoutInMinutes: 360
