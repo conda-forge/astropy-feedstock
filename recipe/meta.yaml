@@ -12,7 +12,7 @@ source:
   sha256: e92d7c9fee86eb3df8714e5dd41bbf9f163d343e1a183d95bf6bd09e4313c940
 
 build:
-  number: 0
+  number: 1
   {% if py < min_py %}
   skip: true
   {% endif %}
@@ -68,8 +68,23 @@ test:
     - samp_hub --help
     - volint --help
     - wcslint --help
+    # We run a subset of the tests which are the most likely to have
+    # issues because they rely on C extensions and bundled libraries
+    - pytest --pyargs astropy.wcs astropy.io.fits
+    # Skipping most tests on aarch64/ppc64le because they take too long
+    - pytest --pyargs astropy.time astropy.convolution astropy.io.ascii  # [not (ppc64le or aarch64)]
   imports:
     - astropy
+    - astropy.cosmology.flrw.scalar_inv_efuncs
+    - astropy.io.ascii.cparser
+    - astropy.io.votable.tablewriter
+    - astropy.modeling.projections
+    - astropy.timeseries.periodograms.lombscargle.implementations.cython_impl
+    - astropy.table._column_mixins
+    - astropy.table._np_utils
+    - astropy.utils._compiler
+    - astropy.utils.xml._iterparser
+    - astropy.wcs._wcs
 
 outputs:
   - name: astropy-base
