@@ -49,7 +49,7 @@ requirements:
     - pyerfa >=2.0.1.1
     - astropy-iers-data >=0.2024.10.28.0.34.7
     - pyyaml >=6.0.0
-    - packaging >=29.0.0
+    - packaging >=22.0.0
   run_constrained:
     # We must prevent installing old astropy and new astropy-base together
     - astropy >=7.0.0
@@ -100,7 +100,7 @@ outputs:
       run:
         - python >={{ python_min }}
         - {{ pin_subpackage('astropy-base', max_pin="x.x.x") }}
-        - matplotlib-base >=3.6.0,!=3.5.2
+        - matplotlib-base >=3.6.0
         - scipy >=1.9.2
         - certifi >=2022.6.15.1
         # We also need numpy from dask[array] but we are already going to install that.
