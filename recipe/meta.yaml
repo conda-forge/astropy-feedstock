@@ -45,12 +45,11 @@ requirements:
     - numpy
   run:
     - python
-    - numpy >=1.23
+    - numpy >=1.23.2
     - pyerfa >=2.0.1.1
     - astropy-iers-data >=0.2024.10.28.0.34.7
-    - importlib-metadata
-    - pyyaml >=3.13
-    - packaging >=19.0
+    - pyyaml >=6.0.0
+    - packaging >=29.0.0
   run_constrained:
     # We must prevent installing old astropy and new astropy-base together
     - astropy >=7.0.0
@@ -101,26 +100,26 @@ outputs:
       run:
         - python >={{ python_min }}
         - {{ pin_subpackage('astropy-base', max_pin="x.x.x") }}
-        - matplotlib-base >=3.5.0,!=3.5.2
-        - certifi
+        - matplotlib-base >=3.6.0,!=3.5.2
         - scipy >=1.9.2
+        - certifi >=2022.6.15.1
         # We also need numpy from dask[array] but we are already going to install that.
-        - dask-core >=2022.8.1
-        - h5py
+        - dask-core >=2022.5.1
+        - h5py >=3.8.0
         - pyarrow >=10.0.1
-        - beautifulsoup4
-        - html5lib
-        - bleach
+        - beautifulsoup4 >=4.9.3
+        - html5lib >=1.1
+        - bleach >=3.2.1
         - pandas >=2.0
-        - sortedcontainers
-        - pytz
-        - jplephem
-        - mpmath
-        - bottleneck
+        - sortedcontainers >=1.5.7
+        - pytz >=2016.10
+        - jplephem >=2.6
+        - mpmath >=1.2.1
+        - bottleneck >=1.3.3
         - fsspec >=2023.4.0
         # fsspec optional deps
         - aiohttp
-        - s3fs
+        - s3fs >=2023.4.0
     test:
       requires:
         - python {{ python_min }}
