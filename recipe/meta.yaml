@@ -103,6 +103,10 @@ outputs:
         - matplotlib-base >=3.6.0
         - scipy >=1.9.2
         - certifi >=2022.6.15.1
+        - ipython >=8.0.0
+        - ipywidgets
+        - ipykernel
+        - ipydatagrid
         # We also need numpy from dask[array] but we are already going to install that.
         - dask-core >=2022.5.1
         - h5py >=3.8.0
