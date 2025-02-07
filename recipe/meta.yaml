@@ -47,7 +47,7 @@ requirements:
     - python
     - numpy >=1.23.2
     - pyerfa >=2.0.1.1
-    - astropy-iers-data >=0.2024.10.28.0.34.7
+    - astropy-iers-data >=0.2025.1.31.12.41.4
     - pyyaml >=6.0.0
     - packaging >=22.0.0
   run_constrained:
