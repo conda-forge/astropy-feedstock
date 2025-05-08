@@ -1,2 +1,4 @@
 python_min:
   - '3.11'
+old_astropy_version:
+  - "6.1.7"
