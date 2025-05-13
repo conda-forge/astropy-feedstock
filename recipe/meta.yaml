@@ -1,4 +1,4 @@
-{% set version = "7.0.1" %}
+{% set version = "7.0.2" %}
 {% set python_min = python_min | default("3.11") %}
 {% set min_py = python_min | replace('.', '') | int %}
 {% set py = py | default(min_py) %}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: 392feeb443b2437cd4c2e0641a65e0f15ba791e148e9b1e5ed7de7dfcb38e460
+  sha256: 11cd23037cfb3de460472078b88c8e942b0838ef6e79fca2ca24d9ccc434e969
 
 build:
   number: 0
