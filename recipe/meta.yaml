@@ -1,4 +1,4 @@
-{% set version = "7.0.2" %}
+{% set version = "7.1.0" %}
 {% set python_min = python_min | default("3.11") %}
 {% set min_py = python_min | replace('.', '') | int %}
 {% set py = py | default(min_py) %}
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: 11cd23037cfb3de460472078b88c8e942b0838ef6e79fca2ca24d9ccc434e969
+  sha256: c8f254322295b1b8cf24303d6f155bf7efdb6c1282882b966ce3040eff8c53c5
 
 build:
   number: 0
@@ -30,24 +30,24 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython >=3.0.0,<3.1.0                  # [build_platform != target_platform]
+    - cython >=3.0.0,<4                      # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
     - python
     - pip
-    - setuptools
+    - setuptools >=77.0.0
     - jinja2 >=3
-    - cython >=3.0.0,<3.1.0
-    - setuptools_scm >=6.2
+    - cython >=3.0.0,<4
+    - setuptools_scm >=8.0.0
     - extension-helpers =1
     - numpy
   run:
     - python
     - numpy >=1.23.2
     - pyerfa >=2.0.1.1
-    - astropy-iers-data >=0.2025.1.31.12.41.4
+    - astropy-iers-data >=0.2025.4.28.0.37.27
     - pyyaml >=6.0.0
     - packaging >=22.0.0
   run_constrained:
@@ -73,7 +73,7 @@ test:
     - pytest --pyargs astropy.time astropy.convolution astropy.io.ascii  # [not (ppc64le or aarch64)]
   imports:
     - astropy
-    - astropy.cosmology.flrw.scalar_inv_efuncs
+    - astropy.cosmology.io
     - astropy.io.ascii.cparser
     - astropy.io.votable.tablewriter
     - astropy.modeling.projections
@@ -104,9 +104,9 @@ outputs:
         - scipy >=1.9.2
         - certifi >=2022.6.15.1
         - ipython >=8.0.0
-        - ipywidgets
-        - ipykernel
-        - ipydatagrid
+        - ipywidgets >=7.7.3
+        - ipykernel >=6.16.0
+        - ipydatagrid >=1.1.13
         # We also need numpy from dask[array] but we are already going to install that.
         - dask-core >=2022.5.1
         - h5py >=3.8.0
@@ -124,6 +124,7 @@ outputs:
         # fsspec optional deps
         - aiohttp
         - s3fs >=2023.4.0
+        - uncompresspy >=0.4.0
     test:
       requires:
         - python {{ python_min }}
