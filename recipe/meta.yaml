@@ -73,7 +73,7 @@ test:
     - pytest --pyargs astropy.time astropy.convolution astropy.io.ascii  # [not (ppc64le or aarch64)]
   imports:
     - astropy
-    - astropy.cosmology.flrw.scalar_inv_efuncs
+    - astropy.cosmology.io
     - astropy.io.ascii.cparser
     - astropy.io.votable.tablewriter
     - astropy.modeling.projections
