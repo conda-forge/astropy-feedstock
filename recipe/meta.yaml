@@ -37,17 +37,17 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
+    - setuptools >=77.0.0
     - jinja2 >=3
-    - cython >=3.0.0,<3.1.0
-    - setuptools_scm >=6.2
+    - cython >=3.0.0,<4
+    - setuptools_scm >=8.0.0
     - extension-helpers =1
     - numpy
   run:
     - python
     - numpy >=1.23.2
     - pyerfa >=2.0.1.1
-    - astropy-iers-data >=0.2025.1.31.12.41.4
+    - astropy-iers-data >=0.2025.4.28.0.37.27
     - pyyaml >=6.0.0
     - packaging >=22.0.0
   run_constrained:
@@ -104,9 +104,9 @@ outputs:
         - scipy >=1.9.2
         - certifi >=2022.6.15.1
         - ipython >=8.0.0
-        - ipywidgets
-        - ipykernel
-        - ipydatagrid
+        - ipywidgets >=7.7.3
+        - ipykernel >=6.16.0
+        - ipydatagrid >=1.1.13
         # We also need numpy from dask[array] but we are already going to install that.
         - dask-core >=2022.5.1
         - h5py >=3.8.0
@@ -124,6 +124,7 @@ outputs:
         # fsspec optional deps
         - aiohttp
         - s3fs >=2023.4.0
+        - uncompresspy >=0.4.0
     test:
       requires:
         - python {{ python_min }}
