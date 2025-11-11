@@ -41,8 +41,9 @@ requirements:
     - jinja2 >=3
     - cython >=3.0.0,<4
     - setuptools_scm >=8.0.0
-    - extension-helpers =1.4
+    - extension-helpers >=1.4,<2
     - numpy
+    - pyerfa >=2.0.1.1
   run:
     - python
     - numpy >=2.0
@@ -101,6 +102,7 @@ outputs:
         - {{ pin_subpackage('astropy-base', max_pin="x.x.x") }}
         - matplotlib-base >=3.8.4
         - scipy >=1.13
+        - narwhals >=1.42.0
         - certifi >=2022.6.15.1
         - ipython >=8.0.0
         - ipywidgets >=7.7.3
