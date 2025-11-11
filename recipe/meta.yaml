@@ -14,7 +14,11 @@ source:
 build:
   number: 0
   python_version_independent: true  # [is_abi3]
+  {% if py < min_py %}
+  skip: true
+  {% else %}
   skip: true  # [is_abi3 and not is_python_min]
+  {% endif %}
   entry_points:
     - fits2bitmap = astropy.visualization.scripts.fits2bitmap:main
     - fitscheck = astropy.io.fits.scripts.fitscheck:main
