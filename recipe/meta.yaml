@@ -2,6 +2,7 @@
 {% set python_min = python_min | default("3.11") %}
 {% set min_py = python_min | replace('.', '') | int %}
 {% set py = py | default(min_py) %}
+{% set py_str = (py | string)[0] ~ "." ~ (py | string)[1:] %}
 
 package:
   name: astropy-base
@@ -14,7 +15,7 @@ source:
 build:
   number: 0
   python_version_independent: true  # [is_abi3]
-  skip: true  # [py < min_py or (is_abi3 and not is_python_min)]
+  skip: true  # [is_abi3 and py != 311]
   entry_points:
     - fits2bitmap = astropy.visualization.scripts.fits2bitmap:main
     - fitscheck = astropy.io.fits.scripts.fitscheck:main
@@ -62,8 +63,8 @@ test:
     - pytest-astropy
     - abi3audit  # [is_abi3]
   commands:
-    - abi3audit $SP_DIR/astropy/**/*.abi3.so -s -v --assume-minimum-abi3 3.11  # [unix and is_abi3]
-    - abi3audit %SP_DIR%/astropy/**/*.pyd -s -v --assume-minimum-abi3 3.11     # [win and is_abi3]
+    - abi3audit $SP_DIR/astropy/**/*.abi3.so -s -v --assume-minimum-abi3 {{ py_str }}  # [unix and is_abi3]
+    - abi3audit %SP_DIR%/astropy/**/*.pyd -s -v --assume-minimum-abi3 {{ py_str }}     # [win and is_abi3]
     - fits2bitmap --help
     - fitscheck --help
     - fitsdiff --help
