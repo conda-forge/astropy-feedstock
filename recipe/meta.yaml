@@ -8,11 +8,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/a/astropy/astropy-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/a/astropy/astropy-{{ version }}.tar.gz
   sha256: 45ca31d5b91fa294cd590a4791a32db94de7f9c8a343155f4d5877baa82351da
 
 build:
-  number: 0
+  number: 1
   {% if py < min_py %}
   skip: true
   {% endif %}
