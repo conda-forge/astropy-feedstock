@@ -6,6 +6,8 @@ channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
+is_abi3:
+- true
 numpy:
 - '2'
 pin_run_as_build:
