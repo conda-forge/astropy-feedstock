@@ -18,46 +18,6 @@ jobs:
         resize_partitions: false
         store_build_artifacts: false
         tools_install_dir: D:\Miniforge
-      win_64_python3.12.____cpython:
-        CONFIG: win_64_python3.12.____cpython
-        UPLOAD_PACKAGES: 'True'
-        build_platform: win-64
-        build_workspace_dir: D:\\bld\\
-        free_disk_space: skip
-        pagefile_size: 0
-        resize_partitions: false
-        store_build_artifacts: false
-        tools_install_dir: D:\Miniforge
-      win_64_python3.13.____cp313:
-        CONFIG: win_64_python3.13.____cp313
-        UPLOAD_PACKAGES: 'True'
-        build_platform: win-64
-        build_workspace_dir: D:\\bld\\
-        free_disk_space: skip
-        pagefile_size: 0
-        resize_partitions: false
-        store_build_artifacts: false
-        tools_install_dir: D:\Miniforge
-      win_64_python3.14.____cp314:
-        CONFIG: win_64_python3.14.____cp314
-        UPLOAD_PACKAGES: 'True'
-        build_platform: win-64
-        build_workspace_dir: D:\\bld\\
-        free_disk_space: skip
-        pagefile_size: 0
-        resize_partitions: false
-        store_build_artifacts: false
-        tools_install_dir: D:\Miniforge
-      win_64_python3.15.____cp315:
-        CONFIG: win_64_python3.15.____cp315
-        UPLOAD_PACKAGES: 'True'
-        build_platform: win-64
-        build_workspace_dir: D:\\bld\\
-        free_disk_space: skip
-        pagefile_size: 0
-        resize_partitions: false
-        store_build_artifacts: false
-        tools_install_dir: D:\Miniforge
   timeoutInMinutes: 360
   variables:
     UPLOAD_TEMP: D:\\tmp

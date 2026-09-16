@@ -2,6 +2,7 @@
 {% set python_min = python_min | default("3.11") %}
 {% set min_py = python_min | replace('.', '') | int %}
 {% set py = py | default(min_py) %}
+{% set py_str = (py | string)[0] ~ "." ~ (py | string)[1:] %}
 
 package:
   name: astropy-base
@@ -12,10 +13,9 @@ source:
   sha256: 45ca31d5b91fa294cd590a4791a32db94de7f9c8a343155f4d5877baa82351da
 
 build:
-  number: 1
-  {% if py < min_py %}
-  skip: true
-  {% endif %}
+  number: 0
+  python_version_independent: true  # [is_abi3]
+  skip: true  # [is_abi3 and py != 311]
   entry_points:
     - fits2bitmap = astropy.visualization.scripts.fits2bitmap:main
     - fitscheck = astropy.io.fits.scripts.fitscheck:main
@@ -25,9 +25,12 @@ build:
     - samp_hub = astropy.samp.hub_script:hub_script
     - volint = astropy.io.votable.volint:main
     - wcslint = astropy.wcs.wcslint:main
+  script_env:
+    - EXTENSION_HELPERS_LIMITED_API=cp311
 
 requirements:
   build:
+    - python-abi3                            # [is_abi3]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython >=3.0.0,<4                      # [build_platform != target_platform]
@@ -41,8 +44,9 @@ requirements:
     - jinja2 >=3
     - cython >=3.0.0,<4
     - setuptools_scm >=8.0.0
-    - extension-helpers =1.4
+    - extension-helpers >=1.4,<2
     - numpy
+    - pyerfa >=2.0.1.1
   run:
     - python
     - numpy >=2.0
@@ -57,7 +61,10 @@ requirements:
 test:
   requires:
     - pytest-astropy
+    - abi3audit  # [is_abi3]
   commands:
+    - abi3audit $SP_DIR/astropy/**/*.abi3.so -s -v --assume-minimum-abi3 {{ py_str }}  # [unix and is_abi3]
+    - abi3audit %SP_DIR%/astropy/**/*.pyd -s -v --assume-minimum-abi3 {{ py_str }}     # [win and is_abi3]
     - fits2bitmap --help
     - fitscheck --help
     - fitsdiff --help
@@ -101,6 +108,7 @@ outputs:
         - {{ pin_subpackage('astropy-base', max_pin="x.x.x") }}
         - matplotlib-base >=3.8.4
         - scipy >=1.13
+        - narwhals >=1.42.0
         - certifi >=2022.6.15.1
         - ipython >=8.0.0
         - ipywidgets >=7.7.3
