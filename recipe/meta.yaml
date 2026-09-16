@@ -12,10 +12,9 @@ source:
   sha256: 45ca31d5b91fa294cd590a4791a32db94de7f9c8a343155f4d5877baa82351da
 
 build:
-  number: 1
-  {% if py < min_py %}
-  skip: true
-  {% endif %}
+  number: 0
+  python_version_independent: true  # [is_abi3]
+  skip: true  # [is_abi3 and not is_python_min]
   entry_points:
     - fits2bitmap = astropy.visualization.scripts.fits2bitmap:main
     - fitscheck = astropy.io.fits.scripts.fitscheck:main
@@ -28,6 +27,7 @@ build:
 
 requirements:
   build:
+    - python-abi3                            # [is_abi3]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython >=3.0.0,<4                      # [build_platform != target_platform]
@@ -58,7 +58,10 @@ requirements:
 test:
   requires:
     - pytest-astropy
+    - abi3audit  # [is_abi3]
   commands:
+    - abi3audit $SP_DIR/astropy/**/*.abi3.so -s -v --assume-minimum-abi3 3.11  # [unix and is_abi3]
+    - abi3audit %SP_DIR%/astropy/**/*.pyd -s -v --assume-minimum-abi3 3.11     # [win and is_abi3]
     - fits2bitmap --help
     - fitscheck --help
     - fitsdiff --help
