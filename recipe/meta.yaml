@@ -1,4 +1,4 @@
-{% set version = "8.0.1" %}
+{% set version = "8.0.2" %}
 {% set python_min = python_min | default("3.11") %}
 {% set min_py = python_min | replace('.', '') | int %}
 {% set py = py | default(min_py) %}
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/a/astropy/astropy-{{ version }}.tar.gz
-  sha256: 45ca31d5b91fa294cd590a4791a32db94de7f9c8a343155f4d5877baa82351da
+  sha256: e6af35823099ad6a40b57dbe5ff845f577374ea131925c9fa4b49eeab06c5310
 
 build:
-  number: 1
+  number: 0
   {% if py < min_py %}
   skip: true
   {% endif %}
